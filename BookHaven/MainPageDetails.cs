@@ -18,15 +18,31 @@ namespace POSSystem
         {
             InitializeComponent();
         }
-
-        public string GetUserSession()
+        
+        string id, role, userName;
+        public MainPageDetails(string userID, string roleType, string name)
         {
-            var loggedInUserName = lbl_loggedInUser.Text;
-            return loggedInUserName;
+            InitializeComponent();
+            id = userID;
+            role = roleType;
+            userName = name;
         }
+
+       
 
         private void MainPageDetails_Load(object sender, EventArgs e)
         {
+            lbl_userType.Text = role;
+            lbl_loggedInUser.Text = userName;
+
+            if (role == "sales clark")
+            {
+                btn_supplierManagement.Hide();
+                btn_user_management.Hide();
+                btn_inventoryManagement.Hide();
+                btn_reports.Hide();
+            }
+
             leftBoarderBtn = new Panel();
             currentButton = new IconButton();
             currentChildForm = new Form();
@@ -216,11 +232,11 @@ namespace POSSystem
 
         }
 
-        public void SetUserSession(string userType, string userName)
-        {
-            lbl_userType.Text = userType;
-            lbl_loggedInUser.Text = userName;
-        }
+        //public void SetUserSession(string role, string name)
+        //{
+        //    lbl_userType.Text = role;
+        //    lbl_loggedInUser.Text = name;
+        //}
 
         private void btn_Customer_Click(object sender, EventArgs e)
         {
@@ -246,10 +262,23 @@ namespace POSSystem
             //OpenChildForm(new ReportingMainPage());
         }
 
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            this.Hide();
+            lg.Show();
+            
+        }
+
         private void btn_Measurements_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color10);
             //OpenChildForm(new MeasurementMainDetail());
+        }
+
+        private void panelManue_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

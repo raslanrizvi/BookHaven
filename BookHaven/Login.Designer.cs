@@ -38,6 +38,7 @@
             this.txtb_userName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
+            this.lbl_errorMsg = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.panel2.Controls.Add(this.lbl_userName);
             this.panel2.Controls.Add(this.txtb_password);
             this.panel2.Controls.Add(this.txtb_userName);
+            this.panel2.Controls.Add(this.lbl_errorMsg);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(171, 158);
             this.panel2.Name = "panel2";
@@ -84,6 +86,7 @@
             this.btn_login.Text = "Login";
             this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_password
             // 
@@ -107,16 +110,19 @@
             // 
             // txtb_password
             // 
+            this.txtb_password.Font = new System.Drawing.Font("Lucida Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.txtb_password.Location = new System.Drawing.Point(152, 108);
             this.txtb_password.Name = "txtb_password";
-            this.txtb_password.Size = new System.Drawing.Size(155, 20);
+            this.txtb_password.PasswordChar = '*';
+            this.txtb_password.Size = new System.Drawing.Size(155, 22);
             this.txtb_password.TabIndex = 1;
             // 
             // txtb_userName
             // 
+            this.txtb_userName.Font = new System.Drawing.Font("Lucida Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.txtb_userName.Location = new System.Drawing.Point(152, 69);
             this.txtb_userName.Name = "txtb_userName";
-            this.txtb_userName.Size = new System.Drawing.Size(155, 20);
+            this.txtb_userName.Size = new System.Drawing.Size(155, 22);
             this.txtb_userName.TabIndex = 1;
             // 
             // label1
@@ -150,6 +156,18 @@
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            // 
+            // lbl_errorMsg
+            // 
+            this.lbl_errorMsg.AutoSize = true;
+            this.lbl_errorMsg.Font = new System.Drawing.Font("Lucida Sans", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_errorMsg.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_errorMsg.Location = new System.Drawing.Point(102, 136);
+            this.lbl_errorMsg.Name = "lbl_errorMsg";
+            this.lbl_errorMsg.Size = new System.Drawing.Size(0, 19);
+            this.lbl_errorMsg.TabIndex = 0;
+            this.lbl_errorMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Login
             // 
@@ -179,5 +197,6 @@
         private System.Windows.Forms.TextBox txtb_password;
         private FontAwesome.Sharp.IconButton btn_Exit;
         private FontAwesome.Sharp.IconButton btn_login;
+        private System.Windows.Forms.Label lbl_errorMsg;
     }
 }

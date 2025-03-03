@@ -34,13 +34,13 @@
             this.btn_Measurements = new FontAwesome.Sharp.IconButton();
             this.btn_expanses = new FontAwesome.Sharp.IconButton();
             this.btn_orders = new FontAwesome.Sharp.IconButton();
-            this.btn_Customer = new FontAwesome.Sharp.IconButton();
+            this.btn_inventoryManagement = new FontAwesome.Sharp.IconButton();
             this.btn_settings = new FontAwesome.Sharp.IconButton();
             this.btn_user_management = new FontAwesome.Sharp.IconButton();
-            this.btn_billing = new FontAwesome.Sharp.IconButton();
-            this.btn_cheque_management = new FontAwesome.Sharp.IconButton();
-            this.btn_supplier_management = new FontAwesome.Sharp.IconButton();
-            this.btn_stock_management = new FontAwesome.Sharp.IconButton();
+            this.btn_supplierManagement = new FontAwesome.Sharp.IconButton();
+            this.btn_customerManagement = new FontAwesome.Sharp.IconButton();
+            this.btn_orderManagement = new FontAwesome.Sharp.IconButton();
+            this.btn_createOrder = new FontAwesome.Sharp.IconButton();
             this.btn_dashboard = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -74,13 +74,13 @@
             this.panelManue.Controls.Add(this.btn_Measurements);
             this.panelManue.Controls.Add(this.btn_expanses);
             this.panelManue.Controls.Add(this.btn_orders);
-            this.panelManue.Controls.Add(this.btn_Customer);
+            this.panelManue.Controls.Add(this.btn_inventoryManagement);
             this.panelManue.Controls.Add(this.btn_settings);
             this.panelManue.Controls.Add(this.btn_user_management);
-            this.panelManue.Controls.Add(this.btn_billing);
-            this.panelManue.Controls.Add(this.btn_cheque_management);
-            this.panelManue.Controls.Add(this.btn_supplier_management);
-            this.panelManue.Controls.Add(this.btn_stock_management);
+            this.panelManue.Controls.Add(this.btn_supplierManagement);
+            this.panelManue.Controls.Add(this.btn_customerManagement);
+            this.panelManue.Controls.Add(this.btn_orderManagement);
+            this.panelManue.Controls.Add(this.btn_createOrder);
             this.panelManue.Controls.Add(this.btn_dashboard);
             this.panelManue.Controls.Add(this.panel2);
             this.panelManue.Dock = System.Windows.Forms.DockStyle.Left;
@@ -89,6 +89,7 @@
             this.panelManue.Name = "panelManue";
             this.panelManue.Size = new System.Drawing.Size(172, 734);
             this.panelManue.TabIndex = 0;
+            this.panelManue.Paint += new System.Windows.Forms.PaintEventHandler(this.panelManue_Paint);
             // 
             // btn_reports
             // 
@@ -101,7 +102,7 @@
             this.btn_reports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_reports.IconSize = 32;
             this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(0, 605);
+            this.btn_reports.Location = new System.Drawing.Point(0, 601);
             this.btn_reports.Margin = new System.Windows.Forms.Padding(2);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
@@ -123,7 +124,7 @@
             this.btn_Measurements.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Measurements.IconSize = 32;
             this.btn_Measurements.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Measurements.Location = new System.Drawing.Point(0, 556);
+            this.btn_Measurements.Location = new System.Drawing.Point(0, 552);
             this.btn_Measurements.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Measurements.Name = "btn_Measurements";
             this.btn_Measurements.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
@@ -145,7 +146,7 @@
             this.btn_expanses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_expanses.IconSize = 32;
             this.btn_expanses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_expanses.Location = new System.Drawing.Point(0, 507);
+            this.btn_expanses.Location = new System.Drawing.Point(0, 503);
             this.btn_expanses.Margin = new System.Windows.Forms.Padding(2);
             this.btn_expanses.Name = "btn_expanses";
             this.btn_expanses.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
@@ -167,38 +168,38 @@
             this.btn_orders.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_orders.IconSize = 32;
             this.btn_orders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_orders.Location = new System.Drawing.Point(0, 458);
+            this.btn_orders.Location = new System.Drawing.Point(0, 454);
             this.btn_orders.Margin = new System.Windows.Forms.Padding(2);
             this.btn_orders.Name = "btn_orders";
             this.btn_orders.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btn_orders.Size = new System.Drawing.Size(172, 49);
             this.btn_orders.TabIndex = 9;
-            this.btn_orders.Text = "Orders";
+            this.btn_orders.Text = "Reports";
             this.btn_orders.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_orders.UseVisualStyleBackColor = true;
             this.btn_orders.Click += new System.EventHandler(this.btn_orders_Click);
             // 
-            // btn_Customer
+            // btn_inventoryManagement
             // 
-            this.btn_Customer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Customer.FlatAppearance.BorderSize = 0;
-            this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
-            this.btn_Customer.IconColor = System.Drawing.Color.White;
-            this.btn_Customer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Customer.IconSize = 32;
-            this.btn_Customer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Customer.Location = new System.Drawing.Point(0, 409);
-            this.btn_Customer.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Customer.Name = "btn_Customer";
-            this.btn_Customer.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btn_Customer.Size = new System.Drawing.Size(172, 49);
-            this.btn_Customer.TabIndex = 8;
-            this.btn_Customer.Text = "Customer Management";
-            this.btn_Customer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Customer.UseVisualStyleBackColor = true;
-            this.btn_Customer.Click += new System.EventHandler(this.btn_Customer_Click);
+            this.btn_inventoryManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_inventoryManagement.FlatAppearance.BorderSize = 0;
+            this.btn_inventoryManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_inventoryManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_inventoryManagement.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btn_inventoryManagement.IconColor = System.Drawing.Color.White;
+            this.btn_inventoryManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_inventoryManagement.IconSize = 32;
+            this.btn_inventoryManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_inventoryManagement.Location = new System.Drawing.Point(0, 405);
+            this.btn_inventoryManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_inventoryManagement.Name = "btn_inventoryManagement";
+            this.btn_inventoryManagement.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btn_inventoryManagement.Size = new System.Drawing.Size(172, 49);
+            this.btn_inventoryManagement.TabIndex = 8;
+            this.btn_inventoryManagement.Text = "Inventory Management";
+            this.btn_inventoryManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_inventoryManagement.UseVisualStyleBackColor = true;
+            this.btn_inventoryManagement.Click += new System.EventHandler(this.btn_Customer_Click);
             // 
             // btn_settings
             // 
@@ -231,7 +232,7 @@
             this.btn_user_management.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_user_management.IconSize = 32;
             this.btn_user_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_user_management.Location = new System.Drawing.Point(0, 360);
+            this.btn_user_management.Location = new System.Drawing.Point(0, 356);
             this.btn_user_management.Margin = new System.Windows.Forms.Padding(2);
             this.btn_user_management.Name = "btn_user_management";
             this.btn_user_management.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
@@ -242,93 +243,93 @@
             this.btn_user_management.UseVisualStyleBackColor = true;
             this.btn_user_management.Click += new System.EventHandler(this.btn_user_management_Click);
             // 
-            // btn_billing
+            // btn_supplierManagement
             // 
-            this.btn_billing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_billing.FlatAppearance.BorderSize = 0;
-            this.btn_billing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_billing.ForeColor = System.Drawing.Color.White;
-            this.btn_billing.IconChar = FontAwesome.Sharp.IconChar.Shopify;
-            this.btn_billing.IconColor = System.Drawing.Color.White;
-            this.btn_billing.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_billing.IconSize = 32;
-            this.btn_billing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_billing.Location = new System.Drawing.Point(0, 311);
-            this.btn_billing.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_billing.Name = "btn_billing";
-            this.btn_billing.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btn_billing.Size = new System.Drawing.Size(172, 49);
-            this.btn_billing.TabIndex = 5;
-            this.btn_billing.Text = "Billing";
-            this.btn_billing.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_billing.UseVisualStyleBackColor = true;
-            this.btn_billing.Click += new System.EventHandler(this.btn_billing_Click);
+            this.btn_supplierManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_supplierManagement.FlatAppearance.BorderSize = 0;
+            this.btn_supplierManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_supplierManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_supplierManagement.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.btn_supplierManagement.IconColor = System.Drawing.Color.White;
+            this.btn_supplierManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_supplierManagement.IconSize = 32;
+            this.btn_supplierManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_supplierManagement.Location = new System.Drawing.Point(0, 311);
+            this.btn_supplierManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_supplierManagement.Name = "btn_supplierManagement";
+            this.btn_supplierManagement.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btn_supplierManagement.Size = new System.Drawing.Size(172, 45);
+            this.btn_supplierManagement.TabIndex = 5;
+            this.btn_supplierManagement.Text = "Supplier Management";
+            this.btn_supplierManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_supplierManagement.UseVisualStyleBackColor = true;
+            this.btn_supplierManagement.Click += new System.EventHandler(this.btn_billing_Click);
             // 
-            // btn_cheque_management
+            // btn_customerManagement
             // 
-            this.btn_cheque_management.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_cheque_management.FlatAppearance.BorderSize = 0;
-            this.btn_cheque_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cheque_management.ForeColor = System.Drawing.Color.White;
-            this.btn_cheque_management.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
-            this.btn_cheque_management.IconColor = System.Drawing.Color.White;
-            this.btn_cheque_management.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cheque_management.IconSize = 32;
-            this.btn_cheque_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cheque_management.Location = new System.Drawing.Point(0, 262);
-            this.btn_cheque_management.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_cheque_management.Name = "btn_cheque_management";
-            this.btn_cheque_management.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btn_cheque_management.Size = new System.Drawing.Size(172, 49);
-            this.btn_cheque_management.TabIndex = 4;
-            this.btn_cheque_management.Text = "Cheque Management";
-            this.btn_cheque_management.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cheque_management.UseVisualStyleBackColor = true;
-            this.btn_cheque_management.Click += new System.EventHandler(this.btn_cheque_management_Click);
+            this.btn_customerManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_customerManagement.FlatAppearance.BorderSize = 0;
+            this.btn_customerManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_customerManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_customerManagement.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.btn_customerManagement.IconColor = System.Drawing.Color.White;
+            this.btn_customerManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_customerManagement.IconSize = 32;
+            this.btn_customerManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_customerManagement.Location = new System.Drawing.Point(0, 262);
+            this.btn_customerManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_customerManagement.Name = "btn_customerManagement";
+            this.btn_customerManagement.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btn_customerManagement.Size = new System.Drawing.Size(172, 49);
+            this.btn_customerManagement.TabIndex = 4;
+            this.btn_customerManagement.Text = "Customer Management";
+            this.btn_customerManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_customerManagement.UseVisualStyleBackColor = true;
+            this.btn_customerManagement.Click += new System.EventHandler(this.btn_cheque_management_Click);
             // 
-            // btn_supplier_management
+            // btn_orderManagement
             // 
-            this.btn_supplier_management.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_supplier_management.FlatAppearance.BorderSize = 0;
-            this.btn_supplier_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_supplier_management.ForeColor = System.Drawing.Color.White;
-            this.btn_supplier_management.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btn_supplier_management.IconColor = System.Drawing.Color.White;
-            this.btn_supplier_management.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_supplier_management.IconSize = 32;
-            this.btn_supplier_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_supplier_management.Location = new System.Drawing.Point(0, 213);
-            this.btn_supplier_management.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_supplier_management.Name = "btn_supplier_management";
-            this.btn_supplier_management.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btn_supplier_management.Size = new System.Drawing.Size(172, 49);
-            this.btn_supplier_management.TabIndex = 3;
-            this.btn_supplier_management.Text = "Supplier Management";
-            this.btn_supplier_management.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_supplier_management.UseVisualStyleBackColor = true;
-            this.btn_supplier_management.Click += new System.EventHandler(this.btn_supplier_management_Click);
+            this.btn_orderManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_orderManagement.FlatAppearance.BorderSize = 0;
+            this.btn_orderManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_orderManagement.ForeColor = System.Drawing.Color.White;
+            this.btn_orderManagement.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btn_orderManagement.IconColor = System.Drawing.Color.White;
+            this.btn_orderManagement.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_orderManagement.IconSize = 32;
+            this.btn_orderManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_orderManagement.Location = new System.Drawing.Point(0, 213);
+            this.btn_orderManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_orderManagement.Name = "btn_orderManagement";
+            this.btn_orderManagement.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btn_orderManagement.Size = new System.Drawing.Size(172, 49);
+            this.btn_orderManagement.TabIndex = 3;
+            this.btn_orderManagement.Text = "Order Management";
+            this.btn_orderManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_orderManagement.UseVisualStyleBackColor = true;
+            this.btn_orderManagement.Click += new System.EventHandler(this.btn_supplier_management_Click);
             // 
-            // btn_stock_management
+            // btn_createOrder
             // 
-            this.btn_stock_management.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_stock_management.FlatAppearance.BorderSize = 0;
-            this.btn_stock_management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_stock_management.ForeColor = System.Drawing.Color.White;
-            this.btn_stock_management.IconChar = FontAwesome.Sharp.IconChar.AreaChart;
-            this.btn_stock_management.IconColor = System.Drawing.Color.White;
-            this.btn_stock_management.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_stock_management.IconSize = 32;
-            this.btn_stock_management.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_stock_management.Location = new System.Drawing.Point(0, 164);
-            this.btn_stock_management.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_stock_management.Name = "btn_stock_management";
-            this.btn_stock_management.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btn_stock_management.Size = new System.Drawing.Size(172, 49);
-            this.btn_stock_management.TabIndex = 2;
-            this.btn_stock_management.Text = "Stock Management";
-            this.btn_stock_management.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_stock_management.UseVisualStyleBackColor = true;
-            this.btn_stock_management.Click += new System.EventHandler(this.btn_stock_management_Click);
+            this.btn_createOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_createOrder.FlatAppearance.BorderSize = 0;
+            this.btn_createOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_createOrder.ForeColor = System.Drawing.Color.White;
+            this.btn_createOrder.IconChar = FontAwesome.Sharp.IconChar.I;
+            this.btn_createOrder.IconColor = System.Drawing.Color.White;
+            this.btn_createOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_createOrder.IconSize = 32;
+            this.btn_createOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_createOrder.Location = new System.Drawing.Point(0, 164);
+            this.btn_createOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_createOrder.Name = "btn_createOrder";
+            this.btn_createOrder.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
+            this.btn_createOrder.Size = new System.Drawing.Size(172, 49);
+            this.btn_createOrder.TabIndex = 2;
+            this.btn_createOrder.Text = "Create Order";
+            this.btn_createOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_createOrder.UseVisualStyleBackColor = true;
+            this.btn_createOrder.Click += new System.EventHandler(this.btn_stock_management_Click);
             // 
             // btn_dashboard
             // 
@@ -473,7 +474,7 @@
             this.btn_Logout.IconColor = System.Drawing.Color.White;
             this.btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Logout.IconSize = 25;
-            this.btn_Logout.Location = new System.Drawing.Point(845, 1);
+            this.btn_Logout.Location = new System.Drawing.Point(862, 1);
             this.btn_Logout.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(107, 28);
@@ -481,6 +482,7 @@
             this.btn_Logout.Text = "Logout";
             this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_Logout.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // lbl_Selectedbtn
             // 
@@ -515,12 +517,12 @@
             this.lbl_loggedInUser.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loggedInUser.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_loggedInUser.ForeColor = System.Drawing.Color.White;
-            this.lbl_loggedInUser.Location = new System.Drawing.Point(757, 8);
+            this.lbl_loggedInUser.Location = new System.Drawing.Point(778, 10);
             this.lbl_loggedInUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_loggedInUser.Name = "lbl_loggedInUser";
-            this.lbl_loggedInUser.Size = new System.Drawing.Size(93, 14);
+            this.lbl_loggedInUser.Size = new System.Drawing.Size(63, 14);
             this.lbl_loggedInUser.TabIndex = 1;
-            this.lbl_loggedInUser.Text = "Mohamed Raslan";
+            this.lbl_loggedInUser.Text = "User Name";
             // 
             // lbl_userType
             // 
@@ -532,9 +534,9 @@
             this.lbl_userType.Location = new System.Drawing.Point(700, 8);
             this.lbl_userType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_userType.Name = "lbl_userType";
-            this.lbl_userType.Size = new System.Drawing.Size(39, 14);
+            this.lbl_userType.Size = new System.Drawing.Size(57, 14);
             this.lbl_userType.TabIndex = 1;
-            this.lbl_userType.Text = "Admin";
+            this.lbl_userType.Text = "User Type";
             // 
             // iconPictureBox1
             // 
@@ -599,11 +601,11 @@
         private FontAwesome.Sharp.IconButton btn_dashboard;
         private FontAwesome.Sharp.IconButton btn_settings;
         private FontAwesome.Sharp.IconButton btn_user_management;
-        private FontAwesome.Sharp.IconButton btn_billing;
-        private FontAwesome.Sharp.IconButton btn_cheque_management;
-        private FontAwesome.Sharp.IconButton btn_supplier_management;
-        private FontAwesome.Sharp.IconButton btn_stock_management;
-        private FontAwesome.Sharp.IconButton btn_Customer;
+        private FontAwesome.Sharp.IconButton btn_supplierManagement;
+        private FontAwesome.Sharp.IconButton btn_customerManagement;
+        private FontAwesome.Sharp.IconButton btn_orderManagement;
+        private FontAwesome.Sharp.IconButton btn_createOrder;
+        private FontAwesome.Sharp.IconButton btn_inventoryManagement;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton btn_logo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;

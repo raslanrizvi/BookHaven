@@ -21,7 +21,9 @@ namespace BookHaven
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPageDetails());
+            //Application.Run(new MainPageDetails());
+            Application.Run(new Login());
+
         }
 
         // using this condition to fix form bluring issue when running the application
