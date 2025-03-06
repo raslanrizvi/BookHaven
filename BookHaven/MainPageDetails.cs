@@ -35,10 +35,16 @@ namespace POSSystem
             lbl_userType.Text = role;
             lbl_loggedInUser.Text = userName;
 
+            //Hide Buttons Not Used
+            btn_expanses.Hide();
+            btn_Measurements.Hide();
+            btn_reports2.Hide();
+
+            //Restricting Based On Role
             if (role == "sales clark")
             {
                 btn_supplierManagement.Hide();
-                btn_user_management.Hide();
+                btn_userManagement.Hide();
                 btn_inventoryManagement.Hide();
                 btn_reports.Hide();
             }
@@ -137,41 +143,7 @@ namespace POSSystem
 
         #region Button Clicks
 
-        private void btn_dashboard_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            //OpenChildForm(new Dashboard());
-        }
-
-        private void btn_stock_management_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new UserDetails());
-        }
-
-        private void btn_supplier_management_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            //OpenChildForm(new SupplierPage());
-        }
-
-        private void btn_cheque_management_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            //OpenChildForm(new ChequeDetailsPage());
-        }
-
-        private void btn_billing_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            //OpenChildForm(new BillingPage());
-        }
-
-        private void btn_user_management_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color6);
-            //OpenChildForm(new UserDetails());
-        }
+        
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
@@ -238,29 +210,9 @@ namespace POSSystem
         //    lbl_loggedInUser.Text = name;
         //}
 
-        private void btn_Customer_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color9);
-            //OpenChildForm(new CustomerDetailsPage());
-        }
+        
 
-        private void btn_expanses_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color10);
-            //OpenChildForm(new DailyExpensesPage());
-        }
-
-        private void btn_orders_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color10);
-            //OpenChildForm(new OrderDetailsPage());
-        }
-
-        private void btn_reports_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color10);
-            //OpenChildForm(new ReportingMainPage());
-        }
+       
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
@@ -270,11 +222,26 @@ namespace POSSystem
             
         }
 
-        private void btn_Measurements_Click(object sender, EventArgs e)
+        //Assigning Left Nav Clicks
+        private void btn_customerManagement_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color10);
-            //OpenChildForm(new MeasurementMainDetail());
+            ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new CustomerDetails());
         }
+
+        private void btn_supplierManagement_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new SupplierDetails());
+        }
+
+        private void btn_userManagement_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new UserDetails());
+        }
+
+        
 
         private void panelManue_Paint(object sender, PaintEventArgs e)
         {

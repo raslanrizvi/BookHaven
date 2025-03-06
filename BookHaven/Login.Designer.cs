@@ -36,9 +36,9 @@
             this.lbl_userName = new System.Windows.Forms.Label();
             this.txtb_password = new System.Windows.Forms.TextBox();
             this.txtb_userName = new System.Windows.Forms.TextBox();
+            this.lbl_errorMsg = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Exit = new FontAwesome.Sharp.IconButton();
-            this.lbl_errorMsg = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@
             this.txtb_password.Name = "txtb_password";
             this.txtb_password.PasswordChar = '*';
             this.txtb_password.Size = new System.Drawing.Size(155, 22);
-            this.txtb_password.TabIndex = 1;
+            this.txtb_password.TabIndex = 2;
             // 
             // txtb_userName
             // 
@@ -124,6 +124,17 @@
             this.txtb_userName.Name = "txtb_userName";
             this.txtb_userName.Size = new System.Drawing.Size(155, 22);
             this.txtb_userName.TabIndex = 1;
+            // 
+            // lbl_errorMsg
+            // 
+            this.lbl_errorMsg.AutoSize = true;
+            this.lbl_errorMsg.Font = new System.Drawing.Font("Lucida Sans", 12.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_errorMsg.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_errorMsg.Location = new System.Drawing.Point(102, 136);
+            this.lbl_errorMsg.Name = "lbl_errorMsg";
+            this.lbl_errorMsg.Size = new System.Drawing.Size(0, 19);
+            this.lbl_errorMsg.TabIndex = 0;
+            this.lbl_errorMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -157,17 +168,6 @@
             this.btn_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Exit.UseVisualStyleBackColor = false;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            // 
-            // lbl_errorMsg
-            // 
-            this.lbl_errorMsg.AutoSize = true;
-            this.lbl_errorMsg.Font = new System.Drawing.Font("Lucida Sans", 12.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_errorMsg.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_errorMsg.Location = new System.Drawing.Point(102, 136);
-            this.lbl_errorMsg.Name = "lbl_errorMsg";
-            this.lbl_errorMsg.Size = new System.Drawing.Size(0, 19);
-            this.lbl_errorMsg.TabIndex = 0;
-            this.lbl_errorMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Login
             // 
