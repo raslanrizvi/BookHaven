@@ -32,6 +32,7 @@
             this.btn_edit = new FontAwesome.Sharp.IconButton();
             this.btn_save = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmb_isMembActive = new System.Windows.Forms.ComboBox();
             this.lbl_customerMemStatus = new System.Windows.Forms.Label();
             this.cmb_customerBranch = new System.Windows.Forms.ComboBox();
@@ -49,11 +50,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.customerDetails_datagrid = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_delete
@@ -149,6 +149,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(944, 138);
             this.panel3.TabIndex = 47;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_delete);
+            this.panel2.Controls.Add(this.btn_save);
+            this.panel2.Controls.Add(this.btn_edit);
+            this.panel2.Location = new System.Drawing.Point(817, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(122, 130);
+            this.panel2.TabIndex = 8;
             // 
             // cmb_isMembActive
             // 
@@ -310,11 +320,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 3);
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(371, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 22);
+            this.label1.Size = new System.Drawing.Size(200, 23);
             this.label1.TabIndex = 21;
             this.label1.Text = "Customer Details";
             // 
@@ -334,16 +344,6 @@
             this.customerDetails_datagrid.Size = new System.Drawing.Size(944, 382);
             this.customerDetails_datagrid.TabIndex = 46;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_delete);
-            this.panel2.Controls.Add(this.btn_save);
-            this.panel2.Controls.Add(this.btn_edit);
-            this.panel2.Location = new System.Drawing.Point(817, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(122, 130);
-            this.panel2.TabIndex = 8;
-            // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,10 +358,10 @@
             this.Load += new System.EventHandler(this.CustomerDetails_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
