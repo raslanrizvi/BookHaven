@@ -47,21 +47,17 @@
             this.btn_edit = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.customerDetails_datagrid = new System.Windows.Forms.DataGridView();
+            this.supplierDetails_datagrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetails_datagrid)).BeginInit();
             this.SuspendLayout();
             // 
             // cmb_supplierType
             // 
             this.cmb_supplierType.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_supplierType.FormattingEnabled = true;
-            this.cmb_supplierType.Items.AddRange(new object[] {
-            "Admin",
-            "User",
-            "Sales Clark"});
             this.cmb_supplierType.Location = new System.Drawing.Point(219, 32);
             this.cmb_supplierType.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_supplierType.Name = "cmb_supplierType";
@@ -235,6 +231,7 @@
             this.btn_delete.Text = "Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
@@ -257,6 +254,7 @@
             this.btn_save.Text = "Save";
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_edit
             // 
@@ -279,6 +277,7 @@
             this.btn_edit.Text = "Edit";
             this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // panel4
             // 
@@ -303,21 +302,21 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "Supplier Details";
             // 
-            // customerDetails_datagrid
+            // supplierDetails_datagrid
             // 
-            this.customerDetails_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customerDetails_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
-            this.customerDetails_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDetails_datagrid.Location = new System.Drawing.Point(31, 203);
-            this.customerDetails_datagrid.Margin = new System.Windows.Forms.Padding(2);
-            this.customerDetails_datagrid.MultiSelect = false;
-            this.customerDetails_datagrid.Name = "customerDetails_datagrid";
-            this.customerDetails_datagrid.RowHeadersVisible = false;
-            this.customerDetails_datagrid.RowHeadersWidth = 51;
-            this.customerDetails_datagrid.RowTemplate.Height = 24;
-            this.customerDetails_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.customerDetails_datagrid.Size = new System.Drawing.Size(944, 382);
-            this.customerDetails_datagrid.TabIndex = 49;
+            this.supplierDetails_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.supplierDetails_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
+            this.supplierDetails_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.supplierDetails_datagrid.Location = new System.Drawing.Point(31, 203);
+            this.supplierDetails_datagrid.Margin = new System.Windows.Forms.Padding(2);
+            this.supplierDetails_datagrid.MultiSelect = false;
+            this.supplierDetails_datagrid.Name = "supplierDetails_datagrid";
+            this.supplierDetails_datagrid.RowHeadersVisible = false;
+            this.supplierDetails_datagrid.RowHeadersWidth = 51;
+            this.supplierDetails_datagrid.RowTemplate.Height = 24;
+            this.supplierDetails_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.supplierDetails_datagrid.Size = new System.Drawing.Size(944, 382);
+            this.supplierDetails_datagrid.TabIndex = 49;
             // 
             // SupplierDetails
             // 
@@ -326,15 +325,16 @@
             this.ClientSize = new System.Drawing.Size(1006, 601);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.customerDetails_datagrid);
+            this.Controls.Add(this.supplierDetails_datagrid);
             this.Name = "SupplierDetails";
             this.Text = "SupplierDetails";
+            this.Load += new System.EventHandler(this.SupplierDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetails_datagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,6 +359,6 @@
         private FontAwesome.Sharp.IconButton btn_edit;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView customerDetails_datagrid;
+        private System.Windows.Forms.DataGridView supplierDetails_datagrid;
     }
 }
