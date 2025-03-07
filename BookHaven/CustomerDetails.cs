@@ -227,9 +227,6 @@ namespace BookHaven
             if (cstmr == null) return;
 
             this.UpdateCustomer(cstmr);
-                
-            
-
         }
 
         private void btn_delete_Click(object sender, EventArgs e)

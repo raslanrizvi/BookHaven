@@ -100,6 +100,7 @@ namespace BookHaven.Repositories
             return null;
         }
 
+        //To Create New Customer Record
         public void CreateCustomer(CustomerModel cstmr)
         {
             try
@@ -135,6 +136,7 @@ namespace BookHaven.Repositories
             }
         }
 
+        //Update Existing Customer Information
         public void UpdateCustomer(CustomerModel cstmr)
         {
             try
@@ -167,6 +169,7 @@ namespace BookHaven.Repositories
             }
         }
         
+        //Delete an Existing Customer
         public void DeleteCustomer(int id)
         {
             try
