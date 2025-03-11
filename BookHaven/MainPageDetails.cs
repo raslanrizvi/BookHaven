@@ -18,9 +18,10 @@ namespace POSSystem
         {
             InitializeComponent();
         }
-        
-        string id, role, userName;
-        public MainPageDetails(string userID, string roleType, string name)
+
+        int id;
+        string  role, userName;
+        public MainPageDetails(int userID, string roleType, string name)
         {
             InitializeComponent();
             id = userID;
@@ -41,7 +42,7 @@ namespace POSSystem
             btn_reports2.Hide();
 
             //Restricting Based On Role
-            if (role == "sales clark")
+            if (role == "Sales Clark")
             {
                 btn_supplierManagement.Hide();
                 btn_userManagement.Hide();

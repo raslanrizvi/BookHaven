@@ -517,12 +517,13 @@
             this.lbl_loggedInUser.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loggedInUser.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_loggedInUser.ForeColor = System.Drawing.Color.White;
-            this.lbl_loggedInUser.Location = new System.Drawing.Point(764, 9);
+            this.lbl_loggedInUser.Location = new System.Drawing.Point(764, 10);
             this.lbl_loggedInUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_loggedInUser.Name = "lbl_loggedInUser";
             this.lbl_loggedInUser.Size = new System.Drawing.Size(76, 13);
             this.lbl_loggedInUser.TabIndex = 1;
             this.lbl_loggedInUser.Text = "User Name";
+            this.lbl_loggedInUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_userType
             // 
@@ -537,6 +538,7 @@
             this.lbl_userType.Size = new System.Drawing.Size(71, 13);
             this.lbl_userType.TabIndex = 1;
             this.lbl_userType.Text = "User Type";
+            this.lbl_userType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // iconPictureBox1
             // 
