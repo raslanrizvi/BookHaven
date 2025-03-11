@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmb_isAccountActive = new System.Windows.Forms.ComboBox();
-            this.cmb_storeId = new System.Windows.Forms.ComboBox();
+            this.dtp_userDOB = new System.Windows.Forms.DateTimePicker();
+            this.cmb_userIsAccountActive = new System.Windows.Forms.ComboBox();
+            this.cmb_userStoreId = new System.Windows.Forms.ComboBox();
             this.cmb_userType = new System.Windows.Forms.ComboBox();
-            this.txt_lastName = new System.Windows.Forms.TextBox();
+            this.txt_userLastName = new System.Windows.Forms.TextBox();
             this.lbl_lastName = new System.Windows.Forms.Label();
-            this.txt_firstName = new System.Windows.Forms.TextBox();
+            this.txt_userFirstName = new System.Windows.Forms.TextBox();
             this.lbl_firstName = new System.Windows.Forms.Label();
-            this.txt_confirmPassword = new System.Windows.Forms.TextBox();
+            this.txt_userConfirmPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_mobile = new System.Windows.Forms.TextBox();
+            this.txt_userMobile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_password = new System.Windows.Forms.TextBox();
+            this.txt_userPassword = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.txt_userName = new System.Windows.Forms.TextBox();
+            this.txt_userEmail = new System.Windows.Forms.TextBox();
+            this.txt_userUName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,59 +57,55 @@
             this.btn_edit = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.customerDetails_datagrid = new System.Windows.Forms.DataGridView();
+            this.userDetails_datagrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDetails_datagrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_userDOB
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtp_userDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Lucida Sans", 11F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(212, 82);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 2, 24, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1930, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(163, 25);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 2, 24, 0, 0, 0, 0);
+            this.dtp_userDOB.CalendarFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_userDOB.Font = new System.Drawing.Font("Lucida Sans", 11F);
+            this.dtp_userDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_userDOB.Location = new System.Drawing.Point(212, 82);
+            this.dtp_userDOB.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
+            this.dtp_userDOB.MinDate = new System.DateTime(1930, 1, 1, 0, 0, 0, 0);
+            this.dtp_userDOB.Name = "dtp_userDOB";
+            this.dtp_userDOB.Size = new System.Drawing.Size(163, 25);
+            this.dtp_userDOB.TabIndex = 6;
+            this.dtp_userDOB.Value = new System.DateTime(2025, 3, 9, 0, 0, 0, 0);
             // 
-            // cmb_isAccountActive
+            // cmb_userIsAccountActive
             // 
-            this.cmb_isAccountActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmb_userIsAccountActive.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_isAccountActive.Font = new System.Drawing.Font("Calibri", 10.8F);
-            this.cmb_isAccountActive.FormattingEnabled = true;
-            this.cmb_isAccountActive.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.cmb_isAccountActive.Location = new System.Drawing.Point(333, 142);
-            this.cmb_isAccountActive.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_isAccountActive.Name = "cmb_isAccountActive";
-            this.cmb_isAccountActive.Size = new System.Drawing.Size(163, 25);
-            this.cmb_isAccountActive.TabIndex = 5;
+            this.cmb_userIsAccountActive.Font = new System.Drawing.Font("Calibri", 10.8F);
+            this.cmb_userIsAccountActive.FormattingEnabled = true;
+            this.cmb_userIsAccountActive.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.cmb_userIsAccountActive.Location = new System.Drawing.Point(333, 142);
+            this.cmb_userIsAccountActive.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_userIsAccountActive.Name = "cmb_userIsAccountActive";
+            this.cmb_userIsAccountActive.Size = new System.Drawing.Size(163, 25);
+            this.cmb_userIsAccountActive.TabIndex = 9;
             // 
-            // cmb_storeId
+            // cmb_userStoreId
             // 
-            this.cmb_storeId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.cmb_userStoreId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_storeId.Font = new System.Drawing.Font("Calibri", 10.8F);
-            this.cmb_storeId.FormattingEnabled = true;
-            this.cmb_storeId.Items.AddRange(new object[] {
-            "Admin",
-            "User",
-            "Sales Clark"});
-            this.cmb_storeId.Location = new System.Drawing.Point(533, 142);
-            this.cmb_storeId.Margin = new System.Windows.Forms.Padding(2);
-            this.cmb_storeId.Name = "cmb_storeId";
-            this.cmb_storeId.Size = new System.Drawing.Size(163, 25);
-            this.cmb_storeId.TabIndex = 4;
+            this.cmb_userStoreId.Font = new System.Drawing.Font("Calibri", 10.8F);
+            this.cmb_userStoreId.FormattingEnabled = true;
+            this.cmb_userStoreId.Location = new System.Drawing.Point(533, 142);
+            this.cmb_userStoreId.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_userStoreId.Name = "cmb_userStoreId";
+            this.cmb_userStoreId.Size = new System.Drawing.Size(163, 25);
+            this.cmb_userStoreId.TabIndex = 10;
             // 
             // cmb_userType
             // 
@@ -117,26 +113,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_userType.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_userType.FormattingEnabled = true;
-            this.cmb_userType.Items.AddRange(new object[] {
-            "Admin",
-            "User",
-            "Sales Clark"});
             this.cmb_userType.Location = new System.Drawing.Point(129, 142);
             this.cmb_userType.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_userType.Name = "cmb_userType";
             this.cmb_userType.Size = new System.Drawing.Size(163, 25);
-            this.cmb_userType.TabIndex = 4;
+            this.cmb_userType.TabIndex = 8;
             // 
-            // txt_lastName
+            // txt_userLastName
             // 
-            this.txt_lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_userLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_lastName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lastName.Location = new System.Drawing.Point(212, 30);
-            this.txt_lastName.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_lastName.Name = "txt_lastName";
-            this.txt_lastName.Size = new System.Drawing.Size(163, 25);
-            this.txt_lastName.TabIndex = 0;
+            this.txt_userLastName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userLastName.Location = new System.Drawing.Point(212, 30);
+            this.txt_userLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userLastName.Name = "txt_userLastName";
+            this.txt_userLastName.Size = new System.Drawing.Size(163, 25);
+            this.txt_userLastName.TabIndex = 2;
             // 
             // lbl_lastName
             // 
@@ -151,16 +143,16 @@
             this.lbl_lastName.TabIndex = 2;
             this.lbl_lastName.Text = "Last Name";
             // 
-            // txt_firstName
+            // txt_userFirstName
             // 
-            this.txt_firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_userFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_firstName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_firstName.Location = new System.Drawing.Point(8, 30);
-            this.txt_firstName.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_firstName.Name = "txt_firstName";
-            this.txt_firstName.Size = new System.Drawing.Size(163, 25);
-            this.txt_firstName.TabIndex = 0;
+            this.txt_userFirstName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userFirstName.Location = new System.Drawing.Point(8, 30);
+            this.txt_userFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userFirstName.Name = "txt_userFirstName";
+            this.txt_userFirstName.Size = new System.Drawing.Size(163, 25);
+            this.txt_userFirstName.TabIndex = 1;
             // 
             // lbl_firstName
             // 
@@ -174,19 +166,20 @@
             this.lbl_firstName.Size = new System.Drawing.Size(80, 15);
             this.lbl_firstName.TabIndex = 2;
             this.lbl_firstName.Text = "First Name";
-            this.lbl_firstName.Click += new System.EventHandler(this.label9_Click);
             // 
-            // txt_confirmPassword
+            // txt_userConfirmPassword
             // 
-            this.txt_confirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_userConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_confirmPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_confirmPassword.Location = new System.Drawing.Point(617, 86);
-            this.txt_confirmPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_confirmPassword.Name = "txt_confirmPassword";
-            this.txt_confirmPassword.Size = new System.Drawing.Size(163, 25);
-            this.txt_confirmPassword.TabIndex = 3;
+            this.txt_userConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userConfirmPassword.Location = new System.Drawing.Point(617, 86);
+            this.txt_userConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userConfirmPassword.Name = "txt_userConfirmPassword";
+            this.txt_userConfirmPassword.PasswordChar = '*';
+            this.txt_userConfirmPassword.Size = new System.Drawing.Size(163, 25);
+            this.txt_userConfirmPassword.TabIndex = 7;
+            this.txt_userConfirmPassword.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -216,17 +209,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Confirm Password";
             // 
-            // txt_mobile
+            // txt_userMobile
             // 
-            this.txt_mobile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_userMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_mobile.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mobile.Location = new System.Drawing.Point(8, 82);
-            this.txt_mobile.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_mobile.Name = "txt_mobile";
-            this.txt_mobile.Size = new System.Drawing.Size(163, 25);
-            this.txt_mobile.TabIndex = 2;
+            this.txt_userMobile.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userMobile.Location = new System.Drawing.Point(8, 82);
+            this.txt_userMobile.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userMobile.Name = "txt_userMobile";
+            this.txt_userMobile.Size = new System.Drawing.Size(163, 25);
+            this.txt_userMobile.TabIndex = 5;
             // 
             // label4
             // 
@@ -242,17 +235,18 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Mobile No.";
             // 
-            // txt_password
+            // txt_userPassword
             // 
-            this.txt_password.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txt_userPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_password.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_password.Location = new System.Drawing.Point(413, 86);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_password.Name = "txt_password";
-            this.txt_password.Size = new System.Drawing.Size(163, 25);
-            this.txt_password.TabIndex = 2;
+            this.txt_userPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userPassword.Location = new System.Drawing.Point(413, 86);
+            this.txt_userPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userPassword.Name = "txt_userPassword";
+            this.txt_userPassword.PasswordChar = '*';
+            this.txt_userPassword.Size = new System.Drawing.Size(163, 25);
+            this.txt_userPassword.TabIndex = 6;
             // 
             // label13
             // 
@@ -268,27 +262,27 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Password";
             // 
-            // txt_email
+            // txt_userEmail
             // 
-            this.txt_email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_userEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_email.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(617, 30);
-            this.txt_email.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(163, 25);
-            this.txt_email.TabIndex = 1;
+            this.txt_userEmail.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userEmail.Location = new System.Drawing.Point(617, 30);
+            this.txt_userEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userEmail.Name = "txt_userEmail";
+            this.txt_userEmail.Size = new System.Drawing.Size(163, 25);
+            this.txt_userEmail.TabIndex = 4;
             // 
-            // txt_userName
+            // txt_userUName
             // 
-            this.txt_userName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_userUName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_userName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_userName.Location = new System.Drawing.Point(415, 30);
-            this.txt_userName.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_userName.Name = "txt_userName";
-            this.txt_userName.Size = new System.Drawing.Size(163, 25);
-            this.txt_userName.TabIndex = 1;
+            this.txt_userUName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_userUName.Location = new System.Drawing.Point(415, 30);
+            this.txt_userUName.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_userUName.Name = "txt_userUName";
+            this.txt_userUName.Size = new System.Drawing.Size(163, 25);
+            this.txt_userUName.TabIndex = 3;
             // 
             // label3
             // 
@@ -358,29 +352,29 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cmb_storeId);
-            this.panel1.Controls.Add(this.cmb_isAccountActive);
+            this.panel1.Controls.Add(this.cmb_userStoreId);
+            this.panel1.Controls.Add(this.cmb_userIsAccountActive);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtp_userDOB);
             this.panel1.Controls.Add(this.cmb_userType);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txt_lastName);
-            this.panel1.Controls.Add(this.txt_confirmPassword);
+            this.panel1.Controls.Add(this.txt_userLastName);
+            this.panel1.Controls.Add(this.txt_userConfirmPassword);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbl_firstName);
-            this.panel1.Controls.Add(this.txt_password);
-            this.panel1.Controls.Add(this.txt_firstName);
+            this.panel1.Controls.Add(this.txt_userPassword);
+            this.panel1.Controls.Add(this.txt_userFirstName);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lbl_lastName);
-            this.panel1.Controls.Add(this.txt_email);
-            this.panel1.Controls.Add(this.txt_mobile);
+            this.panel1.Controls.Add(this.txt_userEmail);
+            this.panel1.Controls.Add(this.txt_userMobile);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txt_userName);
+            this.panel1.Controls.Add(this.txt_userUName);
             this.panel1.Font = new System.Drawing.Font("Lucida Sans", 8.25F);
             this.panel1.Location = new System.Drawing.Point(39, 81);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -417,10 +411,11 @@
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btn_delete.Size = new System.Drawing.Size(102, 39);
-            this.btn_delete.TabIndex = 28;
+            this.btn_delete.TabIndex = 13;
             this.btn_delete.Text = "Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
@@ -441,10 +436,11 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btn_save.Size = new System.Drawing.Size(102, 37);
-            this.btn_save.TabIndex = 28;
+            this.btn_save.TabIndex = 11;
             this.btn_save.Text = "Save";
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_edit
             // 
@@ -465,10 +461,11 @@
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Padding = new System.Windows.Forms.Padding(5, 0, 8, 0);
             this.btn_edit.Size = new System.Drawing.Size(102, 38);
-            this.btn_edit.TabIndex = 28;
+            this.btn_edit.TabIndex = 12;
             this.btn_edit.Text = "Edit";
             this.btn_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // panel4
             // 
@@ -488,30 +485,30 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(386, 3);
+            this.label15.Location = new System.Drawing.Point(403, 3);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(143, 23);
             this.label15.TabIndex = 21;
             this.label15.Text = "User Details";
             // 
-            // customerDetails_datagrid
+            // userDetails_datagrid
             // 
-            this.customerDetails_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.userDetails_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerDetails_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customerDetails_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
-            this.customerDetails_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDetails_datagrid.Location = new System.Drawing.Point(39, 258);
-            this.customerDetails_datagrid.Margin = new System.Windows.Forms.Padding(2);
-            this.customerDetails_datagrid.MultiSelect = false;
-            this.customerDetails_datagrid.Name = "customerDetails_datagrid";
-            this.customerDetails_datagrid.RowHeadersVisible = false;
-            this.customerDetails_datagrid.RowHeadersWidth = 51;
-            this.customerDetails_datagrid.RowTemplate.Height = 24;
-            this.customerDetails_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.customerDetails_datagrid.Size = new System.Drawing.Size(944, 347);
-            this.customerDetails_datagrid.TabIndex = 49;
+            this.userDetails_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.userDetails_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
+            this.userDetails_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userDetails_datagrid.Location = new System.Drawing.Point(39, 258);
+            this.userDetails_datagrid.Margin = new System.Windows.Forms.Padding(2);
+            this.userDetails_datagrid.MultiSelect = false;
+            this.userDetails_datagrid.Name = "userDetails_datagrid";
+            this.userDetails_datagrid.RowHeadersVisible = false;
+            this.userDetails_datagrid.RowHeadersWidth = 51;
+            this.userDetails_datagrid.RowTemplate.Height = 24;
+            this.userDetails_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.userDetails_datagrid.Size = new System.Drawing.Size(944, 347);
+            this.userDetails_datagrid.TabIndex = 49;
             // 
             // UserDetails
             // 
@@ -521,43 +518,44 @@
             this.ClientSize = new System.Drawing.Size(1022, 640);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.customerDetails_datagrid);
+            this.Controls.Add(this.userDetails_datagrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Details";
+            this.Load += new System.EventHandler(this.UserDetails_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerDetails_datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userDetails_datagrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cmb_isAccountActive;
+        private System.Windows.Forms.ComboBox cmb_userIsAccountActive;
         private System.Windows.Forms.ComboBox cmb_userType;
-        private System.Windows.Forms.TextBox txt_firstName;
+        private System.Windows.Forms.TextBox txt_userFirstName;
         private System.Windows.Forms.Label lbl_firstName;
-        private System.Windows.Forms.TextBox txt_confirmPassword;
+        private System.Windows.Forms.TextBox txt_userConfirmPassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.TextBox txt_userPassword;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_userName;
+        private System.Windows.Forms.TextBox txt_userUName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_lastName;
+        private System.Windows.Forms.TextBox txt_userLastName;
         private System.Windows.Forms.Label lbl_lastName;
-        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.TextBox txt_userEmail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_userDOB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_mobile;
+        private System.Windows.Forms.TextBox txt_userMobile;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmb_storeId;
+        private System.Windows.Forms.ComboBox cmb_userStoreId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -566,6 +564,6 @@
         private FontAwesome.Sharp.IconButton btn_edit;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView customerDetails_datagrid;
+        private System.Windows.Forms.DataGridView userDetails_datagrid;
     }
 }
