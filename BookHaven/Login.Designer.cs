@@ -113,9 +113,9 @@
             this.txtb_password.Font = new System.Drawing.Font("Lucida Sans", 9.25F, System.Drawing.FontStyle.Bold);
             this.txtb_password.Location = new System.Drawing.Point(152, 108);
             this.txtb_password.Name = "txtb_password";
-            this.txtb_password.PasswordChar = '*';
             this.txtb_password.Size = new System.Drawing.Size(155, 22);
             this.txtb_password.TabIndex = 2;
+            this.txtb_password.UseSystemPasswordChar = true;
             // 
             // txtb_userName
             // 
@@ -130,7 +130,7 @@
             this.lbl_errorMsg.AutoSize = true;
             this.lbl_errorMsg.Font = new System.Drawing.Font("Lucida Sans", 12.75F, System.Drawing.FontStyle.Bold);
             this.lbl_errorMsg.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_errorMsg.Location = new System.Drawing.Point(102, 136);
+            this.lbl_errorMsg.Location = new System.Drawing.Point(32, 136);
             this.lbl_errorMsg.Name = "lbl_errorMsg";
             this.lbl_errorMsg.Size = new System.Drawing.Size(0, 19);
             this.lbl_errorMsg.TabIndex = 0;

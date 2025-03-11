@@ -30,31 +30,46 @@ namespace BookHaven
                 {
                     lbl_errorMsg.Text = "";
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("select * from Users inner join Role on Users.Role = Role.RoleID where UserName = @userName and Password = @password", con);
+                    SqlCommand cmd = new SqlCommand("select * from Users inner join Role on Users.RoleID = Role.RoleID where UserName = @userName and Password = @password", con);
                     cmd.Parameters.AddWithValue("@userName", txtb_userName.Text);
                     cmd.Parameters.AddWithValue("@password", txtb_password.Text);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
+                    
 
-                    if (dt.Rows.Count > 0)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        String userID = dt.Rows[0][0].ToString();
-                        string roleType = dt.Rows[0][13].ToString();
-                        string firstName = dt.Rows[0][4].ToString();
-                        string lastName = dt.Rows[0][5].ToString();
+                        Boolean status = true;
 
-                        string name = firstName + " " + lastName;
+                        while (reader.Read())
+                        {
+                             status = reader.GetBoolean(11);
 
-                        MainPageDetails mpd = new MainPageDetails(userID, roleType, name);
-                        this.Hide();
-                        mpd.Show();
+                            if (status == true)
+                            {
+                                int userID = reader.GetInt32(0);
+                                string roleType = reader.GetString(13);
+                                string firstName = reader.GetString(04);
+                                string lastName = reader.GetString(05);
+
+                                string name = firstName + " " + lastName;
+
+                                MainPageDetails mpd = new MainPageDetails(userID, roleType, name);
+                                this.Hide();
+                                mpd.Show();
+                            }
+                            
+
+                        }
+                        if (status != true)
+                        {
+                            lbl_errorMsg.Text = "Account InActive - Contact Admin";
+                        }
+                        else
+                        {
+                            lbl_errorMsg.Text = "Invalid Login Details";
+                        }
                         
                     }
-                    else
-                    {
-                        lbl_errorMsg.Text = "Invalid Login Details";
-                    }
+
                 }
             }
             else
