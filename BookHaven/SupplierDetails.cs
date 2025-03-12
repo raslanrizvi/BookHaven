@@ -104,7 +104,7 @@ namespace BookHaven
                 repo.CreateSupplier(suplir);
                 //To Refresh the table with newly added record
                 ReadSuppliers();
-                cmb_supplierType.SelectedValue = 1;
+                cmb_supplierType.SelectedIndex = 0;
                 txt_supplierName.Clear();
                 txt_supplierMobile.Clear();
                 txt_supplierEmail.Clear();
@@ -123,7 +123,8 @@ namespace BookHaven
                 repo.UpdateSupplier(suplir);
                 //To Refresh the table with newly added record
                 ReadSuppliers();
-                cmb_supplierType.SelectedValue = 0;
+                suplirId = 0;
+                cmb_supplierType.SelectedIndex = 0;
                 txt_supplierName.Clear();
                 txt_supplierMobile.Clear();
                 txt_supplierEmail.Clear();

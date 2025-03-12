@@ -135,7 +135,7 @@ namespace BookHaven
                 repo.CreateCustomer(cstmr);
                 //To Refresh the table with newly added record
                 ReadClients();
-                cmb_customerBranch.SelectedValue = 0;
+                cmb_customerBranch.SelectedIndex = 0;
                 txt_customerName.Clear();
                 txt_customerNic.Clear();
                 txt_customerMobile.Clear();
@@ -154,7 +154,8 @@ namespace BookHaven
                 repo.UpdateCustomer(cstmr);
                 //To Refresh the table with newly added record
                 ReadClients();
-                cmb_customerBranch.SelectedValue = 0;
+                cstmrId = 0;
+                cmb_customerBranch.SelectedIndex = 0;
                 txt_customerName.Clear();
                 txt_customerNic.Clear();
                 txt_customerMobile.Clear();

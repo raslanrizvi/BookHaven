@@ -11,16 +11,16 @@ namespace BookHaven.Models
         public int id;
         public int storeId;
         public int roleId;
-        public string userName;
-        public string firstName;
-        public string lastName;
+        public string userName = "";
+        public string firstName = "";
+        public string lastName = "";
         public DateTime dob;
-        public int age;
-        public string mobile;
-        public string email;
-        public string password;
+        public int age ;
+        public string mobile = "";
+        public string email = "";
+        public string password = "";
         public Boolean isActive;
-        public String branch;
-        public string role;
+        public String branch = "";
+        public string role = "";
     }
 }

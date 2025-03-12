@@ -169,8 +169,8 @@ namespace BookHaven
 
                     //To Refresh the table with newly added record
                     ReadUser();
-                    cmb_userStoreId.SelectedValue = 0;
-                    cmb_userType.SelectedValue = 0;
+                    cmb_userStoreId.SelectedIndex = 0;
+                    cmb_userType.SelectedIndex = 0;
 
                     txt_userUName.Clear();
                     txt_userFirstName.Clear();
@@ -204,8 +204,9 @@ namespace BookHaven
 
                     //To Refresh the table with newly added record
                     ReadUser();
-                    cmb_userStoreId.SelectedValue = 0;
-                    cmb_userType.SelectedValue = 0;
+                    usrId = 0;
+                    cmb_userStoreId.SelectedIndex = 0;
+                    cmb_userType.SelectedIndex = 0;
 
                     txt_userUName.Clear();
                     txt_userFirstName.Clear();
