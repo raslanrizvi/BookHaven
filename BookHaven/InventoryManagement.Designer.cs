@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_invIsbn = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_invTitle = new System.Windows.Forms.TextBox();
             this.cmb_invSuppName = new System.Windows.Forms.ComboBox();
             this.cmb_invGenre = new System.Windows.Forms.ComboBox();
@@ -50,8 +52,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.invDetails_datagrid = new System.Windows.Forms.DataGridView();
-            this.txt_invIsbn = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -84,6 +84,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 173);
             this.panel1.TabIndex = 53;
+            // 
+            // txt_invIsbn
+            // 
+            this.txt_invIsbn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_invIsbn.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_invIsbn.Location = new System.Drawing.Point(211, 82);
+            this.txt_invIsbn.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_invIsbn.Name = "txt_invIsbn";
+            this.txt_invIsbn.Size = new System.Drawing.Size(163, 25);
+            this.txt_invIsbn.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(207, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "ISBN No.";
             // 
             // txt_invTitle
             // 
@@ -388,32 +414,6 @@
             this.invDetails_datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.invDetails_datagrid.Size = new System.Drawing.Size(944, 347);
             this.invDetails_datagrid.TabIndex = 52;
-            // 
-            // txt_invIsbn
-            // 
-            this.txt_invIsbn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_invIsbn.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_invIsbn.Location = new System.Drawing.Point(211, 82);
-            this.txt_invIsbn.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_invIsbn.Name = "txt_invIsbn";
-            this.txt_invIsbn.Size = new System.Drawing.Size(163, 25);
-            this.txt_invIsbn.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(207, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "ISBN No.";
             // 
             // InventoryManagement
             // 
