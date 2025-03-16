@@ -22,7 +22,7 @@ namespace BookHaven
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainPageDetails());
-            Application.Run(new InventoryManagement());
+            Application.Run(new CreateOrder());
             //Application.Run(new Login());
 
         }
