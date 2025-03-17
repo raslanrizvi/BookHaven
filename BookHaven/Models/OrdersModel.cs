@@ -17,6 +17,7 @@ namespace BookHaven.Models
         public decimal payAmt;
         public string status;
         public DateTime cretedAt;
-
+        public decimal discount;
+        public Boolean deliveryFree;
     }
 }
