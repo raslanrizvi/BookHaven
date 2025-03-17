@@ -66,9 +66,7 @@
             // 
             // dtp_userDOB
             // 
-            this.dtp_userDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_userDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_userDOB.CalendarFont = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_userDOB.Font = new System.Drawing.Font("Lucida Sans", 11F);
             this.dtp_userDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -97,8 +95,7 @@
             // 
             // cmb_userStoreId
             // 
-            this.cmb_userStoreId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_userStoreId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_userStoreId.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_userStoreId.FormattingEnabled = true;
             this.cmb_userStoreId.Location = new System.Drawing.Point(533, 142);
@@ -109,8 +106,7 @@
             // 
             // cmb_userType
             // 
-            this.cmb_userType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_userType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmb_userType.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_userType.FormattingEnabled = true;
             this.cmb_userType.Location = new System.Drawing.Point(129, 142);
@@ -121,8 +117,7 @@
             // 
             // txt_userLastName
             // 
-            this.txt_userLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_userLastName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userLastName.Location = new System.Drawing.Point(212, 30);
             this.txt_userLastName.Margin = new System.Windows.Forms.Padding(2);
@@ -145,8 +140,7 @@
             // 
             // txt_userFirstName
             // 
-            this.txt_userFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userFirstName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txt_userFirstName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userFirstName.Location = new System.Drawing.Point(8, 30);
             this.txt_userFirstName.Margin = new System.Windows.Forms.Padding(2);
@@ -169,9 +163,7 @@
             // 
             // txt_userConfirmPassword
             // 
-            this.txt_userConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userConfirmPassword.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_userConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userConfirmPassword.Location = new System.Drawing.Point(617, 86);
             this.txt_userConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
@@ -211,9 +203,7 @@
             // 
             // txt_userMobile
             // 
-            this.txt_userMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txt_userMobile.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userMobile.Location = new System.Drawing.Point(8, 82);
             this.txt_userMobile.Margin = new System.Windows.Forms.Padding(2);
@@ -237,9 +227,7 @@
             // 
             // txt_userPassword
             // 
-            this.txt_userPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_userPassword.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userPassword.Location = new System.Drawing.Point(413, 86);
             this.txt_userPassword.Margin = new System.Windows.Forms.Padding(2);
@@ -264,8 +252,7 @@
             // 
             // txt_userEmail
             // 
-            this.txt_userEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_userEmail.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userEmail.Location = new System.Drawing.Point(617, 30);
             this.txt_userEmail.Margin = new System.Windows.Forms.Padding(2);
@@ -275,8 +262,7 @@
             // 
             // txt_userUName
             // 
-            this.txt_userUName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_userUName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_userUName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_userUName.Location = new System.Drawing.Point(415, 30);
             this.txt_userUName.Margin = new System.Windows.Forms.Padding(2);
@@ -351,6 +337,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmb_userStoreId);
             this.panel1.Controls.Add(this.cmb_userIsAccountActive);
@@ -394,7 +381,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_delete.FlatAppearance.BorderSize = 0;
@@ -419,7 +406,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_save.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn_save.FlatAppearance.BorderSize = 0;
@@ -444,8 +431,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_edit.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_edit.FlatAppearance.BorderSize = 0;
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

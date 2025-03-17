@@ -197,6 +197,7 @@
             this.btn_inventoryManagement.Text = "Inventory Management";
             this.btn_inventoryManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_inventoryManagement.UseVisualStyleBackColor = true;
+            this.btn_inventoryManagement.Click += new System.EventHandler(this.btn_inventoryManagement_Click);
             // 
             // btn_settings
             // 
@@ -308,6 +309,7 @@
             this.btn_orderManagement.Text = "Order Management";
             this.btn_orderManagement.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_orderManagement.UseVisualStyleBackColor = true;
+            this.btn_orderManagement.Click += new System.EventHandler(this.btn_orderManagement_Click);
             // 
             // btn_createOrder
             // 
@@ -330,6 +332,7 @@
             this.btn_createOrder.Text = "Create Order";
             this.btn_createOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_createOrder.UseVisualStyleBackColor = true;
+            this.btn_createOrder.Click += new System.EventHandler(this.btn_createOrder_Click);
             // 
             // btn_dashboard
             // 
@@ -557,7 +560,8 @@
             // 
             // panelDesktop
             // 
-            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelDesktop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
             this.panelDesktop.Location = new System.Drawing.Point(172, 33);

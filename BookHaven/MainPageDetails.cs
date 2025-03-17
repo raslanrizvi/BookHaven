@@ -242,7 +242,23 @@ namespace POSSystem
             OpenChildForm(new UserDetails());
         }
 
-        
+        private void btn_createOrder_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+            OpenChildForm(new CreateOrder());
+        }
+
+        private void btn_orderManagement_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new OrderManagement());
+        }
+
+        private void btn_inventoryManagement_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color7);
+            OpenChildForm(new InventoryManagement());
+        }
 
         private void panelManue_Paint(object sender, PaintEventArgs e)
         {
