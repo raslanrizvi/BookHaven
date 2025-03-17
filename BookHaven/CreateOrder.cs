@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,29 +24,144 @@ namespace BookHaven
             InitializeComponent();
         }
 
+        int updOrdId = 0;
+
+        public CreateOrder(int ordId)
+        {
+            InitializeComponent();
+            updOrdId = ordId;
+            ReadOrderItems();
+
+            if (updOrdId != 0)
+            {
+                cmb_book.Enabled = false;
+                nud_qty.Enabled = false;
+                billItems_datagrid.Enabled = false;
+                btn_addItem.Enabled = false;
+                btn_deleteItem.Enabled = false;
+
+                var repo = new OrderRepository();
+                var ord = repo.GetOrder(updOrdId);
+                if (ord == null) return;
+
+
+                this.UpdateOrder(ord);
+            }
+
+        }
+
         int itmNo = 0;
         decimal subTot = 0;
         decimal netTot = 0;
         int indexRow = 0;
+        int custId = 0;
 
-        
+        public void ReadOrderItems()
+        {
+            if (updOrdId != 0)
+            {
+                var repo = new OrderItemRepository();
+                var ordItm = repo.GetOrderItems(updOrdId);
+
+                foreach (var item in ordItm)
+                {
+                    DataGridViewRow newRow = new DataGridViewRow();
+                    newRow.CreateCells(billItems_datagrid);
+                    newRow.Cells[0].Value = itmNo + 1;
+                    newRow.Cells[1].Value = item.bookId;
+                    newRow.Cells[2].Value = item.title;
+                    newRow.Cells[3].Value = item.qty;
+                    newRow.Cells[4].Value = item.price;
+                    newRow.Cells[5].Value = item.tot;
+                    billItems_datagrid.Rows.Add(newRow);
+                    itmNo++;
+                }
+            }
+        }
+
+        //Code to Load data for Update Order
+        public void UpdateOrder(OrdersModel ord)
+        {
+
+            custId = ord.custId;
+
+
+            //conditon to fill Order type
+            if (ord.ordType == "InStore")
+            {
+                this.chb_inStore.Checked = true;
+            }
+            else
+            {
+                this.chb_delivery.Checked = true;
+                this.chb_delFree.Enabled = true;
+            }
+
+            //Condition to fill payment type
+            if (ord.pytMethod == "Cash")
+            {
+                this.chb_cash.Checked = true;
+            }
+            else if (ord.pytMethod == "Card")
+            {
+                this.chb_card.Checked = true;
+            }
+            else
+            {
+                this.chb_payLater.Checked = true;
+            }
+
+            this.txt_discnt.Text = ord.discount.ToString();
+
+            // to set delivery free 
+            if (ord.deliveryFree == true)
+            {
+                chb_delFree.Checked = true;
+            }
+            else
+            {
+                chb_delFree.Checked = false;
+                lbl_deliveryPrice.Show();
+            }
+
+            subTot = ord.tot + ord.discount;
+
+            if (chb_delivery.Checked == true && chb_delFree.Checked == false)
+            {
+                subTot += 350;
+            }
+            netTot = ord.tot;
+            lbl_subTotal.Text = subTot.ToString();
+            lbl_netTotal.Text = ord.tot.ToString();
+
+            txt_pymt.Text = ord.payAmt.ToString();
+            lbl_balance.Text = Convert.ToString(ord.payAmt - ord.tot);
+
+
+
+        }
+
+
 
         private void CreateOrder_Load(object sender, EventArgs e)
         {
+            
 
-                //Disabling by default
+            //Disabling by default
                 chb_delFree.Enabled = false;
                 lbl_deliveryPrice.Enabled = false;
                 chb_cash.Enabled = false;
                 chb_card.Enabled = false;
                 chb_payLater.Enabled = false;
                 lbl_deliveryPrice.Hide();
+
             
 
 
             //Code for loading details on ComboBox Customer
             try
             {
+               
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
@@ -73,6 +189,11 @@ namespace BookHaven
                         //ID is rememberd to use later
                         cmb_cstmr.ValueMember = "ID";
                     }
+                }
+
+                if (updOrdId != 0)
+                {
+                    this.cmb_cstmr.SelectedValue = custId;
                 }
 
             }
@@ -299,6 +420,8 @@ namespace BookHaven
             }
         }
 
+
+        decimal discount;
         private void txt_discnt_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -309,7 +432,7 @@ namespace BookHaven
                 }
                 else
                 {
-                    int discount = int.Parse(txt_discnt.Text);
+                    discount = Convert.ToDecimal(txt_discnt.Text);
                     netTot = netTot - discount;
                     lbl_netTotal.Text = "RS. " + netTot.ToString();
                 }
@@ -356,16 +479,21 @@ namespace BookHaven
             lbl_subTotal.Text = "RS. " + subTot.ToString();
 
             billItems_datagrid.Rows.RemoveAt(rowIndex);
-
+            indexRow = 0;
             
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            //Adding records to Order Model
-            OrdersModel ord = new OrdersModel();
-            ord.empId = 1;
-            ord.custId = int.Parse(cmb_cstmr.SelectedValue.ToString());
+
+            if (updOrdId == 0)
+            {
+                //If it is a New Record then Create new order
+
+                //Adding records to Order Model
+                OrdersModel ord = new OrdersModel();
+                ord.empId = 1;
+                ord.custId = int.Parse(cmb_cstmr.SelectedValue.ToString());
 
                 if (chb_inStore.Checked == true)
                 {
@@ -388,48 +516,157 @@ namespace BookHaven
                 {
                     ord.pytMethod = "Pay Later";
                 }
-            ord.tot = netTot;
-            ord.payAmt = Convert.ToDecimal(txt_pymt.Text);
-                
-            if (ord.payAmt > 0 && ord.payAmt < netTot)
-            {
-                ord.status = "Partial Payment";
-            }
-            else if (chb_delivery.Checked == true && ord.payAmt >= netTot)
-            {
-                ord.status = "Deliverd";
-            }
-            else if (ord.payAmt >= netTot)
-            {
-                ord.status = "Paid";
+
+                ord.discount = discount;
+
+
+                if (chb_delFree.Checked == true)
+                {
+                    ord.deliveryFree = true;
+                }
+                else
+                {
+                    ord.deliveryFree = false;
+                }
+
+                ord.tot = netTot;
+                ord.payAmt = Convert.ToDecimal(txt_pymt.Text);
+
+                if (ord.payAmt > 0 && ord.payAmt < netTot)
+                {
+                    ord.status = "Partial Payment";
+                }
+                else if (chb_delivery.Checked == true && ord.payAmt >= netTot)
+                {
+                    ord.status = "Deliverd";
+                }
+                else if (ord.payAmt >= netTot)
+                {
+                    ord.status = "Paid";
+                }
+                else
+                {
+                    ord.status = "Pending";
+                }
+
+                ord.cretedAt = DateTime.Now;
+                //Order Model End
+
+                //Showing Confirmation Dialog
+                DialogResult dialogResult = MessageBox.Show("Are You sure You Want To Create This Order?", "Create Order", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+
+
+                var OrdItmRepo = new OrderItemRepository();
+                var OrdRepo = new OrderRepository();
+
+                //Adding Items to Order Item Model
+                foreach (DataGridViewRow row in billItems_datagrid.Rows)
+                {
+                    int rowItmNo = Convert.ToInt32(row.Cells["itemNo"].Value);
+                    if (rowItmNo != 0)
+                    {
+                        OrderItemsModel ordItm = new OrderItemsModel();
+                        ordItm.bookId = Convert.ToInt32(row.Cells["bookId"].Value);
+                        ordItm.qty = Convert.ToInt32(row.Cells["bookQty"].Value);
+                        ordItm.price = Convert.ToDecimal(row.Cells["pricePI"].Value);
+                        ordItm.tot = Convert.ToDecimal(row.Cells["itmTotal"].Value);
+
+                        OrdItmRepo.CreateNewOrderItem(ordItm);
+                    }
+                }
+
+                OrdRepo.CreateNewOrder(ord);
+                itmNo = 0;
+                subTot = 0;
+                //netTot = 0;
             }
             else
             {
-                ord.status = "Pending";
-            }
+                //Else it is an existing order, Update Details
+                //Updating records to Order Model
+                OrdersModel ord = new OrdersModel();
 
-            ord.cretedAt = DateTime.Now;
-            //Order Model End
-
-
-            var OrdItmRepo = new OrderItemRepository();
-            var OrdRepo = new OrderRepository();
-            foreach (DataGridViewRow row in billItems_datagrid.Rows)
-            {
-                int rowItmNo = Convert.ToInt32(row.Cells["itemNo"].Value);
-                if (rowItmNo != 0)
+                ord.ordId = updOrdId;
+                
+                if (chb_inStore.Checked == true)
                 {
-                    OrderItemsModel ordItm = new OrderItemsModel();
-                    ordItm.bookId = Convert.ToInt32(row.Cells["bookId"].Value);
-                    ordItm.qty = Convert.ToInt32(row.Cells["bookQty"].Value);
-                    ordItm.price = Convert.ToDecimal(row.Cells["pricePI"].Value);
-                    ordItm.tot = Convert.ToDecimal(row.Cells["itmTotal"].Value);
-
-                    OrdItmRepo.CreateNewOrderItem(ordItm);
+                    ord.ordType = "inStore";
                 }
+                else
+                {
+                    ord.ordType = "Delivery";
+                }
+
+                if (chb_cash.Checked == true)
+                {
+                    ord.pytMethod = "Cash";
+                }
+                else if (chb_card.Checked == true)
+                {
+                    ord.pytMethod = "Card";
+                }
+                else if (chb_payLater.Checked == true)
+                {
+                    ord.pytMethod = "Pay Later";
+                }
+
+                ord.discount = discount;
+
+                if (chb_delFree.Checked == true)
+                {
+                    ord.deliveryFree = true;
+                }
+                else
+                {
+                    ord.deliveryFree = false;
+                }
+
+                ord.tot = netTot;
+                ord.payAmt = Convert.ToDecimal(txt_pymt.Text);
+
+                if (ord.payAmt > 0 && ord.payAmt < netTot)
+                {
+                    ord.status = "Partial Payment";
+                }
+                else if (chb_delivery.Checked == true && ord.payAmt >= netTot)
+                {
+                    ord.status = "Deliverd";
+                }
+                else if (ord.payAmt >= netTot)
+                {
+                    ord.status = "Paid";
+                }
+                else
+                {
+                    ord.status = "Pending";
+                }
+
+                ord.cretedAt = DateTime.Now;
+                //Order Model End
+
+
+                //Showing Confirmation Dialog
+                DialogResult dialogResult = MessageBox.Show("Are You sure You Want To Update This Order?", "Update Order", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.No)
+                {
+                    return;
+                }
+
+                var OrdRepo = new OrderRepository();
+                OrdRepo.UpdateOrder(ord);
+
+                itmNo = 0;
+                subTot = 0;
+                netTot = 0;
+                updOrdId = 0;
+
             }
 
-            OrdRepo.CreateNewOrder(ord);
+
 
         }
     }

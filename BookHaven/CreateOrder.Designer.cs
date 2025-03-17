@@ -88,6 +88,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lbl_avlbQty);
             this.panel1.Controls.Add(this.label1);
@@ -113,9 +115,7 @@
             // 
             // lbl_avlbQty
             // 
-            this.lbl_avlbQty.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_avlbQty.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_avlbQty.AutoSize = true;
             this.lbl_avlbQty.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_avlbQty.ForeColor = System.Drawing.Color.DarkRed;
@@ -127,9 +127,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(520, 75);
@@ -141,8 +139,7 @@
             // 
             // btn_addItem
             // 
-            this.btn_addItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_addItem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_addItem.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btn_addItem.FlatAppearance.BorderSize = 0;
             this.btn_addItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,8 +163,10 @@
             // 
             // nud_qty
             // 
+            this.nud_qty.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nud_qty.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nud_qty.Location = new System.Drawing.Point(560, 106);
+            this.nud_qty.MaximumSize = new System.Drawing.Size(57, 0);
             this.nud_qty.Name = "nud_qty";
             this.nud_qty.Size = new System.Drawing.Size(57, 26);
             this.nud_qty.TabIndex = 17;
@@ -175,9 +174,7 @@
             // 
             // lbl_mebStatus
             // 
-            this.lbl_mebStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_mebStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_mebStatus.AutoSize = true;
             this.lbl_mebStatus.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_mebStatus.Location = new System.Drawing.Point(254, 129);
@@ -188,9 +185,7 @@
             // 
             // lbl_cstEmail
             // 
-            this.lbl_cstEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_cstEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_cstEmail.AutoSize = true;
             this.lbl_cstEmail.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_cstEmail.Location = new System.Drawing.Point(254, 102);
@@ -201,9 +196,7 @@
             // 
             // lbl_cstMobile
             // 
-            this.lbl_cstMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_cstMobile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_cstMobile.AutoSize = true;
             this.lbl_cstMobile.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_cstMobile.Location = new System.Drawing.Point(254, 75);
@@ -214,9 +207,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(103, 129);
@@ -228,9 +219,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(103, 102);
@@ -242,12 +231,12 @@
             // 
             // cmb_cstmr
             // 
-            this.cmb_cstmr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_cstmr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmb_cstmr.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_cstmr.FormattingEnabled = true;
             this.cmb_cstmr.Location = new System.Drawing.Point(106, 40);
             this.cmb_cstmr.Margin = new System.Windows.Forms.Padding(2);
+            this.cmb_cstmr.MaximumSize = new System.Drawing.Size(347, 0);
             this.cmb_cstmr.Name = "cmb_cstmr";
             this.cmb_cstmr.Size = new System.Drawing.Size(347, 25);
             this.cmb_cstmr.TabIndex = 1;
@@ -255,8 +244,7 @@
             // 
             // cmb_book
             // 
-            this.cmb_book.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_book.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmb_book.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_book.FormattingEnabled = true;
             this.cmb_book.Location = new System.Drawing.Point(527, 40);
@@ -268,9 +256,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(521, 111);
@@ -282,8 +268,7 @@
             // 
             // lbl_invSuppName
             // 
-            this.lbl_invSuppName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_invSuppName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_invSuppName.AutoSize = true;
             this.lbl_invSuppName.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_invSuppName.Location = new System.Drawing.Point(101, 19);
@@ -295,9 +280,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(103, 75);
@@ -309,8 +292,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(521, 18);
@@ -322,6 +304,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btn_deleteItem);
             this.panel2.Location = new System.Drawing.Point(556, 248);
             this.panel2.Name = "panel2";
@@ -330,8 +313,7 @@
             // 
             // btn_deleteItem
             // 
-            this.btn_deleteItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_deleteItem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_deleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_deleteItem.FlatAppearance.BorderSize = 0;
             this.btn_deleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -369,6 +351,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(408, 3);
@@ -380,7 +363,8 @@
             // 
             // billItems_datagrid
             // 
-            this.billItems_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.billItems_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.billItems_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.billItems_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
@@ -581,6 +565,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.chb_payLater);
             this.panel3.Controls.Add(this.chb_card);
             this.panel3.Controls.Add(this.chb_cash);
@@ -604,6 +590,8 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.lbl_deliveryPrice);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.lbl_balance);
@@ -690,8 +678,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_save.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn_save.FlatAppearance.BorderSize = 0;
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -715,8 +702,7 @@
             // 
             // iconButton1
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -739,8 +725,7 @@
             // 
             // iconButton2
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton2.BackColor = System.Drawing.Color.Black;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
