@@ -8,11 +8,13 @@ namespace BookHaven.Models
 {
     public class OrderItemsModel
     {
+        public int id;
         public int ordItmId;
         public int ordId;
         public int bookId;
         public int qty;
         public decimal price;
         public decimal tot;
+        public string title;
     }
 }
