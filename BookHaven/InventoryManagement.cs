@@ -46,7 +46,7 @@ namespace BookHaven
             DataTable dt = new DataTable();
 
             dt.Columns.Add("ID");
-            dt.Columns.Add("Gnrplier Name");
+            dt.Columns.Add("Supplier Name");
             dt.Columns.Add("Title");
             dt.Columns.Add("Genre");
             dt.Columns.Add("ISBN");
@@ -64,7 +64,7 @@ namespace BookHaven
                 var row = dt.NewRow();
 
                 row["ID"] = item.id;
-                row["Gnrplier Name"] = item.supName;
+                row["Supplier Name"] = item.supName;
                 row["Title"] = item.title;
                 row["Genre"] = item.genre;
                 row["ISBN"] = item.isbn;
@@ -266,6 +266,53 @@ namespace BookHaven
 
             //Update the Data Grid
             ReadInventory();
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            if (txt_search.Text == "")
+            {
+                MessageBox.Show("The Search Textbox is empty");
+                ReadInventory();
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+
+                dt.Columns.Add("ID");
+                dt.Columns.Add("Supplier Name");
+                dt.Columns.Add("Title");
+                dt.Columns.Add("Genre");
+                dt.Columns.Add("ISBN");
+                dt.Columns.Add("Author");
+                dt.Columns.Add("Qty");
+                dt.Columns.Add("Cost Price");
+                dt.Columns.Add("Sell Price");
+
+
+
+                var repo = new InventoryRepository();
+                var inv = repo.SearchInventories(txt_search.Text);
+
+                foreach (var item in inv)
+                {
+                    var row = dt.NewRow();
+
+                    row["ID"] = item.id;
+                    row["Supplier Name"] = item.supName;
+                    row["Title"] = item.title;
+                    row["Genre"] = item.genre;
+                    row["ISBN"] = item.isbn;
+                    row["Author"] = item.author;
+                    row["Qty"] = item.qty;
+                    row["Cost Price"] = item.costPrice;
+                    row["Sell Price"] = item.sellPrice;
+
+                    dt.Rows.Add(row);
+                }
+
+                this.invDetails_datagrid.DataSource = dt;
+            }
         }
     }
 }

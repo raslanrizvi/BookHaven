@@ -60,6 +60,58 @@ namespace BookHaven.Repositories
             return inventories;
         }
 
+        //TO Search for Inventories
+        public List<InventoryModel> SearchInventories(string txtSearch)
+        {
+            var inventory = new List<InventoryModel>();
+            try
+            {
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    string sql = "SELECT b.*, s.Name, g.Genre FROM ((Books b INNER JOIN Supplier s ON b.supID=s.ID) INNER JOIN BookGenre g ON b.GenreID=g.ID) WHERE Title LIKE @title OR ISBN LIKE @isbn OR Author LIKE @author OR Genre LIKE @genre OR Name LIKE @name ORDER BY ID DESC";
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+                        cmd.Parameters.AddWithValue("@title", string.Format("%{0}%", txtSearch));
+                        cmd.Parameters.AddWithValue("@isbn", string.Format("%{0}%", txtSearch));
+                        cmd.Parameters.AddWithValue("@author", string.Format("%{0}%", txtSearch));
+                        cmd.Parameters.AddWithValue("@genre", string.Format("%{0}%", txtSearch));
+                        cmd.Parameters.AddWithValue("@name", string.Format("%{0}%", txtSearch));
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                InventoryModel inv = new InventoryModel();
+                                inv.id = reader.GetInt32(0);
+                                inv.supId = reader.GetInt32(1);
+                                inv.supName = reader.GetString(9);
+                                inv.genreId = reader.GetInt32(2);
+                                inv.genre = reader.GetString(10);
+                                inv.title = reader.GetString(3);
+                                inv.isbn = reader.GetString(4);
+                                inv.author = reader.GetString(5);
+                                inv.qty = reader.GetInt32(6);
+                                inv.costPrice = reader.GetDecimal(7);
+                                inv.sellPrice = reader.GetDecimal(8);
+
+                                inventory.Add(inv);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Search Inventory Details Error : " + ex.ToString());
+            }
+
+            return inventory;
+        }
+
         //To Check for Specific Inventory
         public InventoryModel GetInventory(int id)
         {

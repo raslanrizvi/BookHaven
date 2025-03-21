@@ -52,6 +52,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.invDetails_datagrid = new System.Windows.Forms.DataGridView();
+            this.btn_search = new FontAwesome.Sharp.IconButton();
+            this.lbl_firstName = new System.Windows.Forms.Label();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,6 +64,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_search);
+            this.panel1.Controls.Add(this.lbl_firstName);
+            this.panel1.Controls.Add(this.txt_search);
             this.panel1.Controls.Add(this.txt_invIsbn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_invTitle);
@@ -415,6 +421,48 @@
             this.invDetails_datagrid.Size = new System.Drawing.Size(944, 347);
             this.invDetails_datagrid.TabIndex = 52;
             // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_search.FlatAppearance.BorderSize = 0;
+            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.ForeColor = System.Drawing.Color.White;
+            this.btn_search.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btn_search.IconColor = System.Drawing.Color.White;
+            this.btn_search.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_search.IconSize = 25;
+            this.btn_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_search.Location = new System.Drawing.Point(302, 125);
+            this.btn_search.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btn_search.Size = new System.Drawing.Size(43, 37);
+            this.btn_search.TabIndex = 62;
+            this.btn_search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // lbl_firstName
+            // 
+            this.lbl_firstName.AutoSize = true;
+            this.lbl_firstName.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_firstName.Location = new System.Drawing.Point(10, 137);
+            this.lbl_firstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_firstName.Name = "lbl_firstName";
+            this.lbl_firstName.Size = new System.Drawing.Size(53, 15);
+            this.lbl_firstName.TabIndex = 61;
+            this.lbl_firstName.Text = "Search";
+            // 
+            // txt_search
+            // 
+            this.txt_search.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.Location = new System.Drawing.Point(67, 133);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(225, 25);
+            this.txt_search.TabIndex = 60;
+            // 
             // InventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,5 +511,8 @@
         private System.Windows.Forms.TextBox txt_invTitle;
         private System.Windows.Forms.TextBox txt_invIsbn;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btn_search;
+        private System.Windows.Forms.Label lbl_firstName;
+        private System.Windows.Forms.TextBox txt_search;
     }
 }
