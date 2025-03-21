@@ -37,6 +37,7 @@
             this.lbl_firstName = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_search = new FontAwesome.Sharp.IconButton();
+            this.btn_viwItms = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDetails_datagrid)).BeginInit();
             this.panel2.SuspendLayout();
@@ -119,6 +120,7 @@
             this.btn_delete.Text = "Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_edit
             // 
@@ -184,6 +186,31 @@
             this.btn_search.TabIndex = 59;
             this.btn_search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // btn_viwItms
+            // 
+            this.btn_viwItms.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_viwItms.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btn_viwItms.FlatAppearance.BorderSize = 0;
+            this.btn_viwItms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viwItms.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_viwItms.ForeColor = System.Drawing.Color.White;
+            this.btn_viwItms.IconChar = FontAwesome.Sharp.IconChar.ListDots;
+            this.btn_viwItms.IconColor = System.Drawing.Color.White;
+            this.btn_viwItms.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_viwItms.IconSize = 32;
+            this.btn_viwItms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_viwItms.Location = new System.Drawing.Point(400, 114);
+            this.btn_viwItms.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_viwItms.Name = "btn_viwItms";
+            this.btn_viwItms.Padding = new System.Windows.Forms.Padding(5, 0, 8, 0);
+            this.btn_viwItms.Size = new System.Drawing.Size(153, 38);
+            this.btn_viwItms.TabIndex = 14;
+            this.btn_viwItms.Text = "View Items";
+            this.btn_viwItms.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_viwItms.UseVisualStyleBackColor = false;
+            this.btn_viwItms.Click += new System.EventHandler(this.btn_viwItms_Click);
             // 
             // OrderManagement
             // 
@@ -191,6 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
             this.ClientSize = new System.Drawing.Size(1006, 601);
+            this.Controls.Add(this.btn_viwItms);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.lbl_firstName);
             this.Controls.Add(this.txt_search);
@@ -219,5 +247,6 @@
         private System.Windows.Forms.Label lbl_firstName;
         private System.Windows.Forms.TextBox txt_search;
         private FontAwesome.Sharp.IconButton btn_search;
+        private FontAwesome.Sharp.IconButton btn_viwItms;
     }
 }
