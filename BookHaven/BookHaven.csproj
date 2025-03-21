@@ -200,6 +200,11 @@
     <Compile Include="Repositories\OrderRepository.cs" />
     <Compile Include="Repositories\SupplierRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="sales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sales.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SupplierDetails.cs">
       <SubType>Form</SubType>
@@ -212,6 +217,12 @@
     </Compile>
     <Compile Include="UserDetails.Designer.cs">
       <DependentUpon>UserDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOrderItms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOrderItms.Designer.cs">
+      <DependentUpon>ViewOrderItms.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CreateOrder.resx">
       <DependentUpon>CreateOrder.cs</DependentUpon>
@@ -240,11 +251,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SalesReports.rdlc" />
     <EmbeddedResource Include="SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDetails.resx">
       <DependentUpon>UserDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOrderItms.resx">
+      <DependentUpon>ViewOrderItms.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -256,6 +271,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sales.xsc">
+      <DependentUpon>sales.xsd</DependentUpon>
+    </None>
+    <None Include="sales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="sales.xss">
+      <DependentUpon>sales.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

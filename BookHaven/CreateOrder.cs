@@ -562,6 +562,7 @@ namespace BookHaven
 
                 var OrdItmRepo = new OrderItemRepository();
                 var OrdRepo = new OrderRepository();
+                
 
                 //Adding Items to Order Item Model
                 foreach (DataGridViewRow row in billItems_datagrid.Rows)
@@ -575,7 +576,10 @@ namespace BookHaven
                         ordItm.price = Convert.ToDecimal(row.Cells["pricePI"].Value);
                         ordItm.tot = Convert.ToDecimal(row.Cells["itmTotal"].Value);
 
+                        //reating new Item Record for order
                         OrdItmRepo.CreateNewOrderItem(ordItm);
+                        //Updating the QTY or Book record
+                        OrdItmRepo.UpdateOrderItemQty(ordItm.bookId, ordItm.qty);
                     }
                 }
 

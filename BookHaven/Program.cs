@@ -21,9 +21,9 @@ namespace BookHaven
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPageDetails());
-            //Application.Run(new OrderManagement());
-            //Application.Run(new Login());
+            //Application.Run(new MainPageDetails());
+            Application.Run(new InventoryManagement());
+           //Application.Run(new Login());
 
         }
 
