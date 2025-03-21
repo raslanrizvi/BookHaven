@@ -89,7 +89,6 @@
             this.panelManue.Name = "panelManue";
             this.panelManue.Size = new System.Drawing.Size(172, 734);
             this.panelManue.TabIndex = 0;
-            this.panelManue.Paint += new System.Windows.Forms.PaintEventHandler(this.panelManue_Paint);
             // 
             // btn_reports2
             // 
@@ -175,6 +174,7 @@
             this.btn_reports.Text = "Reports";
             this.btn_reports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_reports.UseVisualStyleBackColor = true;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // btn_inventoryManagement
             // 
@@ -355,6 +355,7 @@
             this.btn_dashboard.Text = "DashBoard";
             this.btn_dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_dashboard.UseVisualStyleBackColor = true;
+            this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
             // panel2
             // 
@@ -430,7 +431,7 @@
             // 
             this.btn_form_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_form_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_form_close.Image")));
-            this.btn_form_close.Location = new System.Drawing.Point(1031, 1);
+            this.btn_form_close.Location = new System.Drawing.Point(1025, 8);
             this.btn_form_close.Margin = new System.Windows.Forms.Padding(2);
             this.btn_form_close.Name = "btn_form_close";
             this.btn_form_close.Size = new System.Drawing.Size(17, 17);
@@ -443,7 +444,7 @@
             // 
             this.btn_form_resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_form_resize.Image = ((System.Drawing.Image)(resources.GetObject("btn_form_resize.Image")));
-            this.btn_form_resize.Location = new System.Drawing.Point(1002, 1);
+            this.btn_form_resize.Location = new System.Drawing.Point(996, 8);
             this.btn_form_resize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_form_resize.Name = "btn_form_resize";
             this.btn_form_resize.Size = new System.Drawing.Size(17, 17);
@@ -456,7 +457,7 @@
             // 
             this.btn_form_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_form_minimize.Image = ((System.Drawing.Image)(resources.GetObject("btn_form_minimize.Image")));
-            this.btn_form_minimize.Location = new System.Drawing.Point(973, 1);
+            this.btn_form_minimize.Location = new System.Drawing.Point(967, 8);
             this.btn_form_minimize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_form_minimize.Name = "btn_form_minimize";
             this.btn_form_minimize.Size = new System.Drawing.Size(17, 17);
@@ -477,7 +478,7 @@
             this.btn_Logout.IconColor = System.Drawing.Color.White;
             this.btn_Logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Logout.IconSize = 25;
-            this.btn_Logout.Location = new System.Drawing.Point(860, 1);
+            this.btn_Logout.Location = new System.Drawing.Point(851, 1);
             this.btn_Logout.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(107, 28);
@@ -492,7 +493,7 @@
             this.lbl_Selectedbtn.AutoSize = true;
             this.lbl_Selectedbtn.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Selectedbtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbl_Selectedbtn.Location = new System.Drawing.Point(48, 6);
+            this.lbl_Selectedbtn.Location = new System.Drawing.Point(48, 5);
             this.lbl_Selectedbtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Selectedbtn.Name = "lbl_Selectedbtn";
             this.lbl_Selectedbtn.Size = new System.Drawing.Size(98, 18);
@@ -520,7 +521,7 @@
             this.lbl_loggedInUser.BackColor = System.Drawing.Color.Transparent;
             this.lbl_loggedInUser.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold);
             this.lbl_loggedInUser.ForeColor = System.Drawing.Color.White;
-            this.lbl_loggedInUser.Location = new System.Drawing.Point(764, 10);
+            this.lbl_loggedInUser.Location = new System.Drawing.Point(763, 10);
             this.lbl_loggedInUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_loggedInUser.Name = "lbl_loggedInUser";
             this.lbl_loggedInUser.Size = new System.Drawing.Size(76, 13);
@@ -535,7 +536,7 @@
             this.lbl_userType.BackColor = System.Drawing.Color.Transparent;
             this.lbl_userType.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_userType.ForeColor = System.Drawing.Color.White;
-            this.lbl_userType.Location = new System.Drawing.Point(667, 8);
+            this.lbl_userType.Location = new System.Drawing.Point(667, 9);
             this.lbl_userType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_userType.Name = "lbl_userType";
             this.lbl_userType.Size = new System.Drawing.Size(71, 13);
@@ -551,7 +552,7 @@
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 20;
-            this.iconPictureBox1.Location = new System.Drawing.Point(645, 4);
+            this.iconPictureBox1.Location = new System.Drawing.Point(645, 5);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(20, 22);
@@ -579,10 +580,11 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.panelManue);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainPageDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainPageDetails";
+            this.Text = "BookHaven System";
             this.Load += new System.EventHandler(this.MainPageDetails_Load);
             this.panelManue.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -127,6 +127,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.cmb_isMembActive);
@@ -152,6 +154,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btn_delete);
             this.panel2.Controls.Add(this.btn_save);
             this.panel2.Controls.Add(this.btn_edit);
@@ -162,6 +165,7 @@
             // 
             // cmb_isMembActive
             // 
+            this.cmb_isMembActive.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmb_isMembActive.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_isMembActive.FormattingEnabled = true;
             this.cmb_isMembActive.Items.AddRange(new object[] {
@@ -175,6 +179,7 @@
             // 
             // lbl_customerMemStatus
             // 
+            this.lbl_customerMemStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_customerMemStatus.AutoSize = true;
             this.lbl_customerMemStatus.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.lbl_customerMemStatus.Location = new System.Drawing.Point(226, 72);
@@ -186,6 +191,7 @@
             // 
             // cmb_customerBranch
             // 
+            this.cmb_customerBranch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmb_customerBranch.Font = new System.Drawing.Font("Calibri", 10.8F);
             this.cmb_customerBranch.FormattingEnabled = true;
             this.cmb_customerBranch.Location = new System.Drawing.Point(24, 36);
@@ -196,6 +202,7 @@
             // 
             // txt_customerName
             // 
+            this.txt_customerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_customerName.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_customerName.Location = new System.Drawing.Point(227, 36);
             this.txt_customerName.Margin = new System.Windows.Forms.Padding(2);
@@ -205,6 +212,7 @@
             // 
             // lbl_customerName
             // 
+            this.lbl_customerName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_customerName.AutoSize = true;
             this.lbl_customerName.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_customerName.Location = new System.Drawing.Point(225, 13);
@@ -216,6 +224,7 @@
             // 
             // txt_customerNic
             // 
+            this.txt_customerNic.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_customerNic.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_customerNic.Location = new System.Drawing.Point(425, 36);
             this.txt_customerNic.Margin = new System.Windows.Forms.Padding(2);
@@ -225,6 +234,7 @@
             // 
             // txt_customerMobile
             // 
+            this.txt_customerMobile.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_customerMobile.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_customerMobile.Location = new System.Drawing.Point(629, 36);
             this.txt_customerMobile.Margin = new System.Windows.Forms.Padding(2);
@@ -234,6 +244,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(423, 15);
@@ -245,6 +256,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(627, 15);
@@ -256,6 +268,7 @@
             // 
             // txt_customerEmail
             // 
+            this.txt_customerEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_customerEmail.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_customerEmail.Location = new System.Drawing.Point(24, 93);
             this.txt_customerEmail.Margin = new System.Windows.Forms.Padding(2);
@@ -265,6 +278,7 @@
             // 
             // txt_customerAddress
             // 
+            this.txt_customerAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_customerAddress.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_customerAddress.Location = new System.Drawing.Point(424, 93);
             this.txt_customerAddress.Margin = new System.Windows.Forms.Padding(2);
@@ -274,6 +288,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(22, 70);
@@ -285,6 +300,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(422, 70);
@@ -296,6 +312,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lucida Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(21, 13);
@@ -307,6 +324,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(52)))), ((int)(((byte)(66)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
@@ -319,6 +338,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(371, 3);
@@ -330,6 +350,9 @@
             // 
             // customerDetails_datagrid
             // 
+            this.customerDetails_datagrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.customerDetails_datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.customerDetails_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(117)))), ((int)(((byte)(127)))));
             this.customerDetails_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

@@ -33,6 +33,10 @@ namespace POSSystem
 
         private void MainPageDetails_Load(object sender, EventArgs e)
         {
+
+            //ActivateButton(sender, RGBColors.color8);
+            //OpenChildForm(new Dashboard(role));
+
             lbl_userType.Text = role;
             lbl_loggedInUser.Text = userName;
 
@@ -227,7 +231,7 @@ namespace POSSystem
         private void btn_customerManagement_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new CustomerDetails());
+            OpenChildForm(new CustomerDetails(role));
         }
 
         private void btn_supplierManagement_Click(object sender, EventArgs e)
@@ -251,18 +255,25 @@ namespace POSSystem
         private void btn_orderManagement_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new OrderManagement());
+            OpenChildForm(new OrderManagement(role));
         }
 
         private void btn_inventoryManagement_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color7);
-            OpenChildForm(new InventoryManagement());
+            OpenChildForm(new InventoryManagement(role));
         }
 
-        private void panelManue_Paint(object sender, PaintEventArgs e)
+        private void btn_dashboard_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, RGBColors.color8);
+            OpenChildForm(new Dashboard(role));
+        }
 
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color9);
+            OpenChildForm(new ReportView());
         }
     }
 }

@@ -23,6 +23,13 @@ namespace BookHaven
             ReadOrders();
         }
 
+        string role = "Sales Clark";
+        public OrderManagement(string Role)
+        {
+            InitializeComponent();
+            role = Role;
+        }
+
         private void OrderManagement_Load(object sender, EventArgs e)
         {
 

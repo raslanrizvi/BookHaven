@@ -24,6 +24,13 @@ namespace BookHaven
             ReadInventory();
         }
 
+        string role = "Sales Clark";
+        public InventoryManagement(string Role)
+        {
+            InitializeComponent();
+            role = Role;
+        }
+
         private int invId = 0;
 
         public void UpdateInventory(InventoryModel inv)

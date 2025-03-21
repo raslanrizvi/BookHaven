@@ -190,7 +190,6 @@
             // 
             // btn_viwItms
             // 
-            this.btn_viwItms.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_viwItms.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn_viwItms.FlatAppearance.BorderSize = 0;
             this.btn_viwItms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

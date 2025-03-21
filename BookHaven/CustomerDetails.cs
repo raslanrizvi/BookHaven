@@ -22,6 +22,12 @@ namespace BookHaven
             InitializeComponent();
             ReadClients();
         }
+        string role = "Sales Clark";
+        public CustomerDetails(string Role)
+        {
+            InitializeComponent();
+            role = Role;
+        }
 
         private int cstmrId = 0;
 
