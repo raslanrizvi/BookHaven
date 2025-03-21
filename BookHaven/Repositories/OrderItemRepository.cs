@@ -1,4 +1,5 @@
 ﻿using BookHaven.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -117,6 +118,56 @@ namespace BookHaven.Repositories
                         cmd.Parameters.AddWithValue("@id", id);
 
                         cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception Delete Order Item : " + ex.ToString());
+            }
+        }
+
+        //Update Item Inventory
+        int qty = 0;
+        int updQty = 0;
+        public void UpdateOrderItemQty(int id, int Qty)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    string sqlQty = "SELECT Qty FROM Books WHERE ID=@id";
+                    
+
+                    using (SqlCommand cmdQty = new SqlCommand(sqlQty, con))
+                    {
+                        cmdQty.Parameters.AddWithValue("@id", id);
+                        using (SqlDataReader reader = cmdQty.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                qty = reader.GetInt32(0);
+                                updQty = qty - Qty;
+
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("Qty Was Not Edited");
+                            }
+                        }
+                        string sqlUpdQty = "UPDATE Books SET Qty=@qty WHERE ID=@id";
+                        using (SqlCommand cmdUpdQty = new SqlCommand(sqlUpdQty, con))
+                        {
+                            cmdUpdQty.Parameters.AddWithValue("@id", id);
+                            cmdUpdQty.Parameters.AddWithValue("@qty", updQty);
+
+                            cmdUpdQty.ExecuteNonQuery();
+
+                        }
+
                     }
                 }
             }
