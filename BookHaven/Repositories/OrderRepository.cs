@@ -100,6 +100,54 @@ namespace BookHaven.Repositories
             return orders;
         }
 
+        //TO Search for orders
+        public List<OrdersModel> SearchOrders(string txtSearch)
+        {
+            var orders = new List<OrdersModel>();
+            try
+            {
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM Orders WHERE ID=@id";
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+                        cmd.Parameters.AddWithValue("@id", int.Parse(txtSearch));
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                OrdersModel ord = new OrdersModel();
+                                ord.ordId = reader.GetInt32(0);
+                                ord.empId = reader.GetInt32(1);
+                                ord.custId = reader.GetInt32(2);
+                                ord.ordType = reader.GetString(3);
+                                ord.pytMethod = reader.GetString(4);
+                                ord.tot = reader.GetDecimal(5);
+                                ord.payAmt = reader.GetDecimal(6);
+                                ord.status = reader.GetString(7);
+                                ord.cretedAt = reader.GetDateTime(8);
+                                ord.discount = reader.GetDecimal(9);
+                                ord.deliveryFree = reader.GetBoolean(10);
+
+                                orders.Add(ord);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Load Order Details to Update Error : " + ex.ToString());
+            }
+
+            return orders;
+        }
+
         //To Check for Specific Order
         public OrdersModel GetOrder(int id)
         {
@@ -200,6 +248,7 @@ namespace BookHaven.Repositories
                         cmd.ExecuteNonQuery();
                     }
                 }
+                MessageBox.Show("OrderID " + id + " Record Was Successfully Deleted");
             }
             catch (Exception ex)
             {
